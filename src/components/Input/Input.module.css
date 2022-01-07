@@ -1,0 +1,7 @@
+input {
+    border: none;
+    border-bottom: 1px solid var(--main);
+    background-color: #00000000;
+    width: 100px;
+    height: 30px;
+}

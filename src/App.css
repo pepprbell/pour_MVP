@@ -1,3 +1,8 @@
-.App {
-  text-align: center;
+body{
+  -ms-overflow-style: none;
+  background-color: var(--content);
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

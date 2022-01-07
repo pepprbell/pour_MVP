@@ -1,0 +1,48 @@
+.main {
+    position: fixed;
+    background-color: var(--main);
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.play {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+}
+
+.none {
+    display: none;
+}
+
+.intro {
+    position: absolute;
+    height: 40vh;
+    text-align: left;
+    margin-top: 28vh;
+    margin-left: 330px;
+    color: var(--content);
+}
+
+.intro h1 {
+    font-size: 60px;
+    line-height: 1.5;
+}
+
+.intro audio {
+    width: 300px;
+    height: 70px;
+}
+
+.tommy {
+    margin-top: 15vh;
+    position: absolute;
+    height: 85vh;
+}
+
+.sig {
+    position: absolute;
+    bottom: 5vh;
+    right: 5vw;
+}

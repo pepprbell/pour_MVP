@@ -6,3 +6,5 @@ function Record(props) {
         <div></div>
     )
 }
+
+export default Record

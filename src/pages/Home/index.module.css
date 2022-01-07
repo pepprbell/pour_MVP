@@ -1,0 +1,282 @@
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.goUp {
+    position: fixed;
+    right: 100px;
+    bottom: 80px;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.goUp img {
+    width: 50px;
+}
+
+/* -----------------------  content ----------------------- */
+
+.blank {
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+}
+
+button {
+    z-index: 4;
+}
+
+/* .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000070;
+    z-index: 999;
+}
+
+.modalContainer {
+    position: fixed;
+    top: 10vh;
+    left: 10vw;
+    height: 80vh;
+    width: 80vw;
+    background: #fff;
+    z-index: 9999;
+} */
+
+.modalBody {
+    background: #000;
+}
+
+.content {
+    /* padding-top: 5vh; */
+    background-color: var(--content);
+    /* background: -webkit-linear-gradient(top, #E9E8E800, var(--content) 5vh); */
+    width: 100vw;
+    height: auto;
+    z-index: 2;
+    position: relative;
+}
+
+.rear {
+    display: flex;
+    position: relative;
+    max-width: 1440px;
+    height: 2000px;
+    margin: 0 auto;
+    /* padding: 100px 0 100px; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.rearLeft {
+    width: 200px;
+    height: 800px;
+    /* background-color: olive; */
+}
+
+.rearRight {
+    width: 1060px;
+    height: 800px;
+    /* background-color: salmon; */
+    padding-top: 140px;
+}
+
+.profileFix {
+    /* top: 180px; */
+    width: inherit;
+    height: inherit;
+}
+
+.rearLeft h1 {
+    font-size: 60px;
+    text-align: left;
+    margin: 0;
+    padding-bottom: 54px;
+}
+
+.line {
+    width: 80px;
+    height: 8px;
+    background-color: var(--main);
+    margin-bottom: 20px;
+}
+
+.rearLeft span {
+    text-align: left;
+}
+
+.rearLeft a {
+    -webkit-text-fill-color: var(--point-sub);
+    transition: 0.25s;
+    text-align: left;
+    padding-top: 5px;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+.lov:hover {
+    -webkit-text-fill-color: var(--main);
+}
+
+.insta:hover {
+    background: linear-gradient(90deg, #5851db, #c13584, #e1306c, #fd1d1d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.naver:hover {
+    opacity: 1;
+    /* color: #2db400; */
+    -webkit-text-fill-color: #2db400;
+}
+
+/* -----------------------  L/R ----------------------- */
+
+.desc {
+    height: 200px;
+    background-color: #ddd;
+    color: #888;
+}
+
+.profileSample {
+    margin: 50px 0;
+}
+
+.title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: inherit;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.title p:hover {
+    cursor: pointer;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cards > div {
+    width: 240px;
+    height: 320px;
+    background: #ddd;
+    color: #888;
+}
+
+.card {
+    position: relative;
+}
+
+.card img {
+    width: 240px;
+    height: 320px;
+    background: #fff;
+}
+
+.hoverInfo {
+    position: absolute;
+    padding: 30px;
+    top: 0;
+    left: 0;
+    background: #f0f0f0;
+    opacity: 0;
+    transition: 0.2s;
+    width: 240px;
+    height: 320px;
+    text-align: left;
+}
+
+.hoverInfo:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.hoverInfo h4 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hoverInfo p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.hoverInfo i {
+    font-size: 21px;
+    float: right;
+}
+
+.cardDesc {
+    width: 100%;
+    height: 100%;
+}
+
+.link {
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    padding: 5px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #fff;
+    color: var(--main);
+    border-radius: 5px;
+    z-index: 8;
+}
+
+/* -----------------------  content ----------------------- */
+/* -----------------------  footer ----------------------- */
+
+footer {
+    border-top: #ccc 1px;
+    line-height: 1;
+    margin: 0 auto;
+}
+
+.footer {
+    max-width: 1440px;
+    padding-top: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.fCard {
+    width: 400px;
+    text-align: left;
+    animation: show 0.5s;
+}
+
+.fCard h1 {
+    color: #333;
+    font-weight: bold;
+}
+
+.fCard p {
+    color: #999;
+    font-size: 14px;
+}
