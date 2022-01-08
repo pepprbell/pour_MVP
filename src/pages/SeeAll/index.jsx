@@ -4,7 +4,7 @@ import styles from './index.module.css'
 
 function SeeAll() {
     return (
-        <div>
+        <div className={styles.rear}>
             <Card></Card>
             <Card></Card>
             <Card></Card>

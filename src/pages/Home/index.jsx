@@ -11,6 +11,7 @@ import gray from '../../assets/none.png'
 import ruin from '../../assets/R6-edit.png'
 import exarch from '../../assets/exarch.jpg'
 import bio from '../../assets/bio.jpg'
+import Menu from '../../components/Menu/Menu'
 import {
     Card, Header
 } from '../../components'
@@ -24,18 +25,19 @@ function Home(props) {
     const [visibleCss, setVisibleCss] = useState("visible")
     const [profilePos, setProfilePos] = useState("relative")
     const [profileTop, setProfileTop] = useState("140px")
+
     const handleScroll = () => {
-    const position = window.pageYOffset
-    setScroll(position)
-    setTopCss(position/100*-30)
-    if (position >= 920) {
-        setProfilePos("fixed")
-        setProfileTop("191px")
-    }
-    else if (position < 920) {
-        setProfilePos("relative")
-        setProfileTop("140px")
-    }
+        const position = window.pageYOffset
+        const vh = window.innerHeight
+        setScroll(position)
+        setTopCss(position/100*-30)
+        
+        if (position >= vh) {
+            setProfilePos("fixed")
+        }
+        else if (position < vh) {
+            setProfilePos("relative")
+        }
     }
 
     useEffect(() => {
@@ -80,9 +82,6 @@ function Home(props) {
             <img src={upButton} alt="" />
             </div>
             <div className={styles.blank}></div>
-            {/* <div className={styles.modal} onClick={closeModal} style={{display: modalOn}}>
-            <div className={styles.modalContainer}></div>
-            </div> */}
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content">
@@ -100,8 +99,8 @@ function Home(props) {
                 <div className={styles.line}></div>
                 <span>
                 <a className={styles.lov} href="https://lordofvoice.com/seungwoo" target='_blank'>로드오브보이스</a>
-                <a className={styles.insta} href="https://www.instagram.com/minswoosh/" target='_blank'>Instagram</a>
-                <a className={styles.naver} href="https://cafe.naver.com/mvp1103" target='_blank'>Cafe</a>
+                <a className={styles.insta} href="https://www.instagram.com/minswoosh/" target='_blank'>인스타그램</a>
+                <a className={styles.naver} href="https://cafe.naver.com/mvp1103" target='_blank'>네이버 카페</a>
                 </span>
                 </div>
                 </div>
@@ -109,7 +108,7 @@ function Home(props) {
                 <div className={styles.desc}>설명?</div>
                 <div className={styles.profileSample}>
                     <span className={styles.title}>
-                    <h1>Game</h1>
+                    <h1>게임</h1>
                     <p>모두보기</p>
                     </span>
                     <span className={styles.cards}>
@@ -121,7 +120,7 @@ function Home(props) {
                 </div>
                 <div className={styles.profileSample}>
                     <span className={styles.title}>
-                    <h1>Ad</h1>
+                    <h1>광고</h1>
                     <p>모두보기</p>
                     </span>
                     <span className={styles.cards}>

@@ -1,6 +1,5 @@
 .main {
     position: fixed;
-    background-color: var(--main);
     top: 0;
     width: 100vw;
     height: 100vh;
@@ -22,7 +21,7 @@
     text-align: left;
     margin-top: 28vh;
     margin-left: 330px;
-    color: var(--content);
+    color: var(--main);
 }
 
 .intro h1 {

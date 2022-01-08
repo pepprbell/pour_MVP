@@ -1,6 +1,6 @@
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 @import url(https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap);
 
 h1 {
   font-family: 'NanumSquare',san-serif;
@@ -16,8 +16,9 @@ body {
 }
 
 :root {
-  --main: rgb(63, 64, 59);
-  --point: rgb(63, 64, 59);
-  --point-sub: #BFB6A4;
-  --content: #E9E8E8;
+  --white: #fefefe;
+  --main: #333;
+  --point: #F2C46D;
+  --point-sub: #b187c2;
+  --content: #f8f2ea;
 }

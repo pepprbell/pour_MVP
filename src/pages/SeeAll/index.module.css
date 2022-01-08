@@ -1,0 +1,10 @@
+.rear {
+    display: flex;
+    position: relative;
+    max-width: 1440px;
+    height: 2000px;
+    margin: 0 auto;
+    /* padding: 100px 0 100px; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

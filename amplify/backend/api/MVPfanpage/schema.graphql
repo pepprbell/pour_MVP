@@ -1,23 +1,37 @@
+type Short @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Character: String!
+  Content: String!
+  Image: AWSURL
+}
+
+type Foreign @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Actor: String!
+  Content: String!
+  Character: String!
+}
+
+type Audiobook @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Author: String!
+  Book: String!
+  Link: AWSURL
+}
+
 type Advertisement @model @auth(rules: [{allow: public}]) {
   id: ID!
-  AdName: String!
-  Voice: String
+  Ad: String!
+  Image: AWSURL
+  Voice: AWSURL
 }
 
-type Animation @model @auth(rules: [{allow: public}]) {
+type Dubbing @model @auth(rules: [{allow: public}]) {
   id: ID!
-  CharacterName: String!
-  AnimationName: String!
-  Image: String
-  Voice: String
+  Character: String!
+  Content: String!
+  Type: String!
+  Image: AWSURL
+  Voice: AWSURL
 }
-
-type Game @model @auth(rules: [{allow: public}]) {
-  id: ID!
-  CharacterName: String!
-  GameName: String!
-  Company: String
-  Type: String
-  Image: String
-  Voice: String
-}
+ 

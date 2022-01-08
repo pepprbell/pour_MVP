@@ -1,6 +1,5 @@
 body{
   -ms-overflow-style: none;
-  background-color: var(--content);
 }
 
 ::-webkit-scrollbar {

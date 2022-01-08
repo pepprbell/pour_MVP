@@ -4,21 +4,63 @@ import { ModelInit, MutableModel, PersistentModelConstructor } from "@aws-amplif
 
 
 
+type ShortMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+type ForeignMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+type AudiobookMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
 type AdvertisementMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
-type AnimationMetaData = {
+type DubbingMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
-type GameMetaData = {
-  readOnlyFields: 'createdAt' | 'updatedAt';
+export declare class Short {
+  readonly id: string;
+  readonly Character: string;
+  readonly Content: string;
+  readonly Image?: string;
+  readonly createdAt?: string;
+  readonly updatedAt?: string;
+  constructor(init: ModelInit<Short, ShortMetaData>);
+  static copyOf(source: Short, mutator: (draft: MutableModel<Short, ShortMetaData>) => MutableModel<Short, ShortMetaData> | void): Short;
+}
+
+export declare class Foreign {
+  readonly id: string;
+  readonly Actor: string;
+  readonly Content: string;
+  readonly Character: string;
+  readonly createdAt?: string;
+  readonly updatedAt?: string;
+  constructor(init: ModelInit<Foreign, ForeignMetaData>);
+  static copyOf(source: Foreign, mutator: (draft: MutableModel<Foreign, ForeignMetaData>) => MutableModel<Foreign, ForeignMetaData> | void): Foreign;
+}
+
+export declare class Audiobook {
+  readonly id: string;
+  readonly Author: string;
+  readonly Book: string;
+  readonly Link?: string;
+  readonly createdAt?: string;
+  readonly updatedAt?: string;
+  constructor(init: ModelInit<Audiobook, AudiobookMetaData>);
+  static copyOf(source: Audiobook, mutator: (draft: MutableModel<Audiobook, AudiobookMetaData>) => MutableModel<Audiobook, AudiobookMetaData> | void): Audiobook;
 }
 
 export declare class Advertisement {
   readonly id: string;
-  readonly AdName: string;
+  readonly Ad: string;
+  readonly Image?: string;
   readonly Voice?: string;
   readonly createdAt?: string;
   readonly updatedAt?: string;
@@ -26,28 +68,15 @@ export declare class Advertisement {
   static copyOf(source: Advertisement, mutator: (draft: MutableModel<Advertisement, AdvertisementMetaData>) => MutableModel<Advertisement, AdvertisementMetaData> | void): Advertisement;
 }
 
-export declare class Animation {
+export declare class Dubbing {
   readonly id: string;
-  readonly CharacterName: string;
-  readonly AnimationName: string;
+  readonly Character: string;
+  readonly Content: string;
+  readonly Type: string;
   readonly Image?: string;
   readonly Voice?: string;
   readonly createdAt?: string;
   readonly updatedAt?: string;
-  constructor(init: ModelInit<Animation, AnimationMetaData>);
-  static copyOf(source: Animation, mutator: (draft: MutableModel<Animation, AnimationMetaData>) => MutableModel<Animation, AnimationMetaData> | void): Animation;
-}
-
-export declare class Game {
-  readonly id: string;
-  readonly CharacterName: string;
-  readonly GameName: string;
-  readonly Company?: string;
-  readonly Type?: string;
-  readonly Image?: string;
-  readonly Voice?: string;
-  readonly createdAt?: string;
-  readonly updatedAt?: string;
-  constructor(init: ModelInit<Game, GameMetaData>);
-  static copyOf(source: Game, mutator: (draft: MutableModel<Game, GameMetaData>) => MutableModel<Game, GameMetaData> | void): Game;
+  constructor(init: ModelInit<Dubbing, DubbingMetaData>);
+  static copyOf(source: Dubbing, mutator: (draft: MutableModel<Dubbing, DubbingMetaData>) => MutableModel<Dubbing, DubbingMetaData> | void): Dubbing;
 }

@@ -7,7 +7,7 @@ function Header(props) {
   return (
     <header id="main" className={styles.main} style={{top: props.topCss, visibility: props.audiovisibleCss}}>
       <div className={styles.intro}>
-        <h1>프로필 사진이나<br/>승우버스 짤 같은 것 ></h1>
+        <h1>여기엔 인삿말<br/>저쪽엔 프사 ></h1>
         <audio id="voice" controls src={voice} className={styles.audio}></audio>
       </div>
       <img src={tommy} alt="" className={styles.tommy}/>

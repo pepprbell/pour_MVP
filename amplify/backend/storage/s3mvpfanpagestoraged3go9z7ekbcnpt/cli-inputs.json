@@ -1,0 +1,10 @@
+{
+  "resourceName": "s3mvpfanpagestoraged3go9z7ekbcnpt",
+  "bucketName": "mvpfanpage-storage-d3go9z7ekbcnpt",
+  "policyUUID": "352d2d51",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE"
+  ]
+}

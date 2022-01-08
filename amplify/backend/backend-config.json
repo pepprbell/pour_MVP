@@ -8,14 +8,19 @@
           "defaultAuthentication": {
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
-              "apiKeyExpirationDays": 365,
-              "apiKeyExpirationDate": "2023-01-07T05:35:42.415Z",
+              "apiKeyExpirationDays": 30,
               "description": "api key description"
             }
           },
           "additionalAuthenticationProviders": [
             {
               "authenticationType": "AWS_IAM"
+            },
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authMVPfanpage"
+              }
             }
           ]
         }
@@ -52,6 +57,13 @@
           "EMAIL"
         ]
       }
+    }
+  },
+  "storage": {
+    "s3mvpfanpagestoraged3go9z7ekbcnpt": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": []
     }
   }
 }
