@@ -24,9 +24,12 @@ function Menu() {
         </div>
         <div className={classnames(styles.menu, (menuOn ? styles.show : styles.menu))}>
             <div className={styles.rear}>
+              <div className={styles.flex}>
                 <A value="홈" goTo="/"></A>
                 <A value="데이터 생성" goTo="/create"></A>
                 <A value="See All" goTo="/seeall"></A>
+              </div>
+              <p>Current</p>
             </div>
         </div>
       </div>

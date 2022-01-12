@@ -26,11 +26,9 @@
     font-weight: bold;
 }
 
-.hoverInfo p {
+.hoverInfo a {
+    text-decoration: none;
+    color: var(--main);
     font-size: 14px;
     margin: 0;
-}
-
-.hoverInfo i {
-    /* font-size: 21px; */
 }

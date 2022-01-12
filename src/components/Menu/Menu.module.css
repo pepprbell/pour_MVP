@@ -31,12 +31,21 @@
 }
 
 .rear {
+    margin: 0 auto;
+    max-width: 1440px;
+    text-align: center;
+    height: 100%;
+}
+
+.rear p {
+    color: var(--white);
+}
+
+.flex {
     display: flex;
     justify-content: space-around;
-    margin: 0 auto;
-    margin-top: 72px;
-    max-width: 1440px;
-    text-align: left;
+    align-items: center;
+    margin: auto;
 }
 
 .show {

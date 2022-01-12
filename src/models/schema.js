@@ -219,8 +219,8 @@ export const schema = {
                 }
             ]
         },
-        "Advertisement": {
-            "name": "Advertisement",
+        "Ad": {
+            "name": "Ad",
             "fields": {
                 "id": {
                     "name": "id",
@@ -268,7 +268,7 @@ export const schema = {
                 }
             },
             "syncable": true,
-            "pluralName": "Advertisements",
+            "pluralName": "Ads",
             "attributes": [
                 {
                     "type": "model",
@@ -382,5 +382,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "8eb664727dd42b95fb6cc51c6ab49882"
+    "version": "44857d1571b0926a123c93bc5e8cb403"
 };

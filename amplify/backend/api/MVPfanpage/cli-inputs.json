@@ -3,7 +3,7 @@
   "serviceConfiguration": {
     "apiName": "MVPfanpage",
     "serviceName": "AppSync",
-    "gqlSchemaPath": "/tmp/amplify-ee5db82a-8937-43ba-94e0-5cda61969e4e/amplify/backend/api/MVPfanpage/schema.graphql",
+    "gqlSchemaPath": "C:\\Users\\bellpeppr\\Desktop\\folio\\amplify\\backend\\api\\MVPfanpage\\schema.graphql",
     "defaultAuthType": {
       "mode": "API_KEY",
       "keyDescription": "api key description",
@@ -21,7 +21,39 @@
     "conflictResolution": {
       "defaultResolutionStrategy": {
         "type": "AUTOMERGE"
-      }
+      },
+      "perModelResolutionStrategy": [
+        {
+          "resolutionStrategy": {
+            "type": "AUTOMERGE"
+          },
+          "entityName": "Short"
+        },
+        {
+          "resolutionStrategy": {
+            "type": "AUTOMERGE"
+          },
+          "entityName": "Foreign"
+        },
+        {
+          "resolutionStrategy": {
+            "type": "AUTOMERGE"
+          },
+          "entityName": "Audiobook"
+        },
+        {
+          "resolutionStrategy": {
+            "type": "AUTOMERGE"
+          },
+          "entityName": "Ad"
+        },
+        {
+          "resolutionStrategy": {
+            "type": "AUTOMERGE"
+          },
+          "entityName": "Dubbing"
+        }
+      ]
     }
   }
 }

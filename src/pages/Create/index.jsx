@@ -1,60 +1,130 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './index.module.css'
 import {
   Input, Select, Button
 } from '../../components'
+import awsConfig from '../../aws-exports.js'
+import { Amplify } from '@aws-amplify/core'
+
+import { DataStore } from '@aws-amplify/datastore'
+import { Short, Ad, Audiobook, Dubbing, Foreign } from '../../models'
+
+Amplify.configure(awsConfig)
 
 function Create() {
+
   // 타입 옵션 지정
-  const dubbing = ['TV 애니메이션', '극장 애니메이션', '특촬', '게임', '드라마 CD', '오디오드라마']
-  const short = ['단역']
-  const foreign = ['외화']
-  const audiobook = ['오디오북']
-  const ad = ['광고']
 
-  // 폼 옵션 지정
-  const dubbingF = ['배역 이름', '작품 이름']
-  const shortF = ['배역 이름', '작품 이름']
-  const foreignF = ['배역 이름', '작품 이름', '배우 이름']
-  const audiobookF = ['책 이름', '작가']
-  const adF = ['광고 이름']
+  const dubbing = [['TV 애니메이션', '극장 애니메이션', '특촬', '게임', '드라마 CD', '오디오드라마'],['배역 이름', '작품 이름'],['Character', 'Content'],['tv','theater','kamen','game','dramacd','audiodrama']]
+  const short = [['단역'],['배역 이름', '작품 이름'],['Character', 'Content'],['short']]
+  const foreign = [['외화'],['배역 이름', '작품 이름', '배우 이름'],['Character', 'Content', 'Actor'],['foreign']]
+  const audiobook = [['오디오북'],['책 이름', '작가'],['Book', 'Author'],['audiobook']]
+  const ad = [['광고'],['광고 이름'],['Ad'],['ad']]
 
-  const [selOption, setSelOption] = useState(dubbing)
-  const [typeIn, setTypeIn] = useState(dubbingF)
+  const [selected, setSelected] = useState(dubbing)
 
   function handleType(type) {
-    if (type=="dubbing") {
-      setSelOption(dubbing)
-      setTypeIn(dubbingF)
+    if (type==="dubbing") {
+      setSelected(dubbing)
     }
-    if (type=="short") {
-      setSelOption(short)
-      setTypeIn(shortF)
+    if (type==="short") {
+      setSelected(short)
     }
-    if (type=="foreign") {
-      setSelOption(foreign)
-      setTypeIn(foreignF)
+    if (type==="foreign") {
+      setSelected(foreign)
     }
-    if (type=="audiobook") {
-      setSelOption(audiobook)
-      setTypeIn(audiobookF)
+    if (type==="audiobook") {
+      setSelected(audiobook)
     }
-    if (type=="ad") {
-      setSelOption(ad)
-      setTypeIn(adF)
+    if (type==="ad") {
+      setSelected(ad)
     }
   }
 
-  // 폼
+  useEffect(() => {
+    handleType('dubbing')
+  }, [])
+
+  const [input1, setInput1] = useState('')
+  const [input2, setInput2] = useState('')
+  const [input3, setInput3] = useState('')
+  const [type, setType] = useState('tv')
+
+  function handleInput(num,e) {
+    if (num===0) {
+      setInput1(e.target.value)
+    }
+    if (num===1) {
+      setInput2(e.target.value)
+    }
+    if (num===2) {
+      setInput3(e.target.value)
+    }
+  }
+
+  // Input 폼
   const createForm = []
-  for (let i = 0; i < typeIn.length; i++) {
+  for (let i = 0; i < selected[1].length; i++) {
     createForm.push(
-      <p>{typeIn[i]}<span> *</span></p>
+      <p>{selected[1][i]}<span> *</span></p>
     )
     createForm.push(
-      <Input placeholder={typeIn[i]}></Input>
+      <Input placeholder={selected[1][i]} id={String(i)} inputHandler={(e) => handleInput(i,e)}></Input>
     )
-    
+  }
+
+  function submit() {
+    if (selected[3][0]==='tv') {
+      const saveForm = {
+        "Character": input1,
+        "Content": input2,
+        "Type": type,
+      }
+      console.log(saveForm)
+      DataStore.save(
+        new Dubbing(saveForm)
+      )
+    }
+    if (selected[3][0]==='ad') {
+      const saveForm = {
+        "Ad": input1,
+      }
+      console.log(saveForm)
+      DataStore.save(
+        new Ad(saveForm)
+      )
+    }
+    if (selected[3][0]==='foreign') {
+      const saveForm = {
+        "Character": input1,
+        "Content": input2,
+        "Actor": input3,
+      }
+      console.log(saveForm)
+      DataStore.save(
+        new Foreign(saveForm)
+      )
+    }
+    if (selected[3][0]==='audiobook') {
+      const saveForm = {
+        "Author": input1,
+        "Book": input2,
+      }
+      console.log(saveForm)
+      DataStore.save(
+        new Audiobook(saveForm)
+      )
+    }
+    if (selected[3][0]==='short') {
+      const saveForm = {
+        "Character": input1,
+        "Content": input2,
+      }
+      console.log(saveForm)
+      DataStore.save(
+        new Short(saveForm)
+      )
+    }
   }
 
   return (
@@ -72,12 +142,13 @@ function Create() {
           <input id="short" type="radio" name="type"/>
           <label className={styles.tab_item} for="short" onClick={() => {handleType('short')}}>단역</label>
         </div>
+
         <div className={styles.form}>
           <p>작품 유형<span> *</span></p>
-          <Select option={selOption}></Select>
+          <Select option={selected[0]} value={selected[3]} selectHandler={e => setType(e.target.value)}></Select>
           {createForm}
         </div>
-        <Button className={styles.button} text="데이터 저장"></Button>
+        <Button className={styles.button} text="데이터 저장" clickHandler={submit}></Button>
       </div>
     </div>
   )

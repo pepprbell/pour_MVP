@@ -16,7 +16,7 @@ type AudiobookMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
-type AdvertisementMetaData = {
+type AdMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
@@ -57,15 +57,15 @@ export declare class Audiobook {
   static copyOf(source: Audiobook, mutator: (draft: MutableModel<Audiobook, AudiobookMetaData>) => MutableModel<Audiobook, AudiobookMetaData> | void): Audiobook;
 }
 
-export declare class Advertisement {
+export declare class Ad {
   readonly id: string;
   readonly Ad: string;
   readonly Image?: string;
   readonly Voice?: string;
   readonly createdAt?: string;
   readonly updatedAt?: string;
-  constructor(init: ModelInit<Advertisement, AdvertisementMetaData>);
-  static copyOf(source: Advertisement, mutator: (draft: MutableModel<Advertisement, AdvertisementMetaData>) => MutableModel<Advertisement, AdvertisementMetaData> | void): Advertisement;
+  constructor(init: ModelInit<Ad, AdMetaData>);
+  static copyOf(source: Ad, mutator: (draft: MutableModel<Ad, AdMetaData>) => MutableModel<Ad, AdMetaData> | void): Ad;
 }
 
 export declare class Dubbing {

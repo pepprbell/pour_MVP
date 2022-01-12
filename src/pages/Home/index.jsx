@@ -4,14 +4,6 @@ import { API } from 'aws-amplify';
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import Player from '../../components/Player.js'
 import upButton from '../../assets/up.png'
-import playButton from '../../assets/play.png'
-import pauseButton from '../../assets/pause.png'
-import dodesho from '../../assets/dodesho.png'
-import gray from '../../assets/none.png'
-import ruin from '../../assets/R6-edit.png'
-import exarch from '../../assets/exarch.jpg'
-import bio from '../../assets/bio.jpg'
-import Menu from '../../components/Menu/Menu'
 import {
     Card, Header
 } from '../../components'
@@ -82,7 +74,7 @@ function Home(props) {
             <img src={upButton} alt="" />
             </div>
             <div className={styles.blank}></div>
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            {/* <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content">
                     <div class="modal-body" className={styles.modalBody}>
@@ -90,7 +82,7 @@ function Home(props) {
                     </div>
                 </div>
                 </div>
-            </div>
+            </div> */}
             <div className={styles.content}>
             <div className={styles.rear}>
                 <div className={styles.rearLeft}>
@@ -131,6 +123,7 @@ function Home(props) {
                     </span>
                 </div>
                 </div>
+                <div className={styles.black}></div>
             </div>
             </div>
         <footer>
