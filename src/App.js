@@ -3,14 +3,16 @@ import styles from './App.module.css'
 import {
   Home, SeeAll, Create
 } from './pages'
-import Menu from './components/Menu/Menu'
+import {
+  Menu, Footer
+} from './components'
 import './App.css'
 import { Route } from 'react-router-dom';
 
 function App() {
 
   return (
-    <div className={styles.App}>
+    <div>
       <Menu></Menu>
       <BrowserRouter>
         <Route exact path='/' component={ Home }></Route>
@@ -18,6 +20,7 @@ function App() {
         <Route path='/create' component={ Create }></Route>
         {/* <Route path='/' component={  }></Route> */}
       </BrowserRouter>
+      <Footer></Footer>
     </div>
   )
 }
