@@ -1,0 +1,41 @@
+.minicard {
+    width: 210px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #33333390; */
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.pic {
+    background-color: mediumspringgreen;
+    width: 60px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.white {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+}
+
+.allH4 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.allA {
+    text-decoration: none;
+    color: var(--main);
+    margin: 0;
+    font-size: 14px;
+}
+
+.allA:hover {
+    color: var(--main);
+}

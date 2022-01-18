@@ -1,34 +1,73 @@
+/* --------------global-------------- */
+
 .card {
     position: relative;
+    margin-right: 4px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin-bottom: 20px;
+}
+
+.white {
+    display: flex;
+    text-align: left;
+    width: 100%;
+    height: fit-content;
+    margin: 5px 0;
+}
+
+.card a {
+    text-decoration: none;
+    color: var(--main);
+    margin: 0;
+}
+
+.card a:hover {
+    color: var(--main);
 }
 
 .card img {
-    width: 240px;
-    height: 320px;
-    background: #fff;
+    object-fit: cover;
+    /* border-radius: 15px; */
 }
 
-.hoverInfo {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    padding: 0 15px;
-    bottom: 0;
-    left: 0;
-    background: #fefefed0;
-    text-align: left;
-    width: 240px;
-    height: 80px;
+/* ---------------home--------------- */
+
+.homeImg {
+    width: 230px;
+    height: 230px;
 }
 
-.hoverInfo h4 {
+.homeH4 {
     font-size: 20px;
     font-weight: bold;
 }
 
-.hoverInfo a {
-    text-decoration: none;
-    color: var(--main);
+.homeA {
     font-size: 14px;
+}
+
+.homeWhite {
+    padding: 0 15px;
+    min-height: 90px;
+}
+
+/* --------------seeall-------------- */
+
+.allImg {
+    width: 210px;
+    height: 120px;
+}
+
+.allH4 {
+    font-size: 16px;
     margin: 0;
+}
+
+.allA {
+    font-size: 14px;
+}
+
+.allWhite {
+    padding: 5px 10px;
+    min-height: 90px;
 }
