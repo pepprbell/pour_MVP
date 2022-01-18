@@ -1,18 +1,11 @@
 .main {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
 }
 
 .play {
     position: absolute;
     width: 70px;
     height: 70px;
-}
-
-.none {
-    display: none;
 }
 
 .intro {
@@ -27,6 +20,7 @@
 .intro h1 {
     font-size: 60px;
     line-height: 1.5;
+    font-weight: 600;
 }
 
 .intro audio {
@@ -35,13 +29,14 @@
 }
 
 .tommy {
-    margin-top: 15vh;
     position: absolute;
-    height: 85vh;
+    height: 80vh;
+    bottom: 15px;
+    right: 400px;
 }
 
 .sig {
     position: absolute;
-    bottom: 5vh;
-    right: 5vw;
+    bottom: 60px;
+    right: 220px;
 }
