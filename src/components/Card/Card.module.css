@@ -2,9 +2,11 @@
 
 .card {
     position: relative;
-    margin-right: 4px;
+    margin-right: 6px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     margin-bottom: 20px;
+    /* padding-bottom: 20px; */
+    word-break: break-all;
 }
 
 .white {
@@ -13,6 +15,7 @@
     width: 100%;
     height: fit-content;
     margin: 5px 0;
+    box-sizing: border-box;
 }
 
 .card a {
@@ -32,14 +35,19 @@
 
 /* ---------------home--------------- */
 
+.homeCard {
+    max-width: 320px;
+    margin: 0;
+}
+
 .homeImg {
-    width: 230px;
-    height: 230px;
+    width: 320px;
+    height: 180px;
 }
 
 .homeH4 {
     font-size: 20px;
-    font-weight: bold;
+    margin: 8px 0;
 }
 
 .homeA {
@@ -52,6 +60,10 @@
 }
 
 /* --------------seeall-------------- */
+
+.allCard {
+    max-width: 210px;
+}
 
 .allImg {
     width: 210px;
@@ -69,5 +81,5 @@
 
 .allWhite {
     padding: 5px 10px;
-    min-height: 90px;
+    min-height: 70px;
 }

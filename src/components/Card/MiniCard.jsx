@@ -6,9 +6,9 @@ function MiniCard(props) {
         <div className={styles.minicard}>
             <img className={styles.pic} src={none}></img>
             <div className={styles.white}>
-                <div>
-                <h4 className={styles.allH4}>캐릭터{props.character}</h4>
-                <a className={styles.allA}>작품{props.content}</a>
+                <div className={styles.textarea}>
+                <h4 className={styles.allH4} href={props.href}>{props.first}</h4>
+                <p className={styles.allA}>{props.second}</p>
                 </div>
             </div>
         </div>

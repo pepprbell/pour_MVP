@@ -3,13 +3,12 @@
     height: 60px;
     display: flex;
     align-items: center;
-    /* border: 1px solid #33333390; */
     box-sizing: border-box;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin: 0 6px 20px 0;
 }
 
 .pic {
-    background-color: mediumspringgreen;
     width: 60px;
     height: 100%;
     object-fit: cover;
@@ -25,17 +24,23 @@
 }
 
 .allH4 {
+    max-width: 130px;
     font-size: 16px;
     margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .allA {
-    text-decoration: none;
-    color: var(--main);
+    max-width: 130px;
     margin: 0;
     font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-.allA:hover {
-    color: var(--main);
+.allH4:hover {
+    cursor: pointer;
 }
