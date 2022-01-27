@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styles from './Menu.module.css'
 import classnames from 'classnames';
-import menu from '../../assets/mvplogo.png'
+import menu from '../../assets/menu.png'
 import { A } from '..';
 
 
@@ -19,9 +19,7 @@ function Menu() {
 
     return (
       <div>
-        <div className={styles.menuDiv}>
-          <img className={styles.menuImg} src={menu} onClick={openMenu} alt="" />
-        </div>
+          <img className={styles.menuDiv} src={menu} onClick={openMenu} alt="" />
         <div className={classnames(styles.menu, (menuOn ? styles.show : styles.menu))}>
           <div className={styles.rear}>
             <div className={styles.flex}>

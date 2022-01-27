@@ -1,13 +1,8 @@
 .menuDiv {
-    border: 2px solid #555;
-    background-color: var(--white);
-    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
-    z-index: 9;
-    cursor: pointer;
-}
-
-.menuImg {
     z-index: 9;
     cursor: pointer;
 }
@@ -15,30 +10,22 @@
 @media (max-width: 799px) {
     .menuDiv {
         width: 60px;
-        height: 60px;
+        height: 66px;
         left: 24px;
         top: 24px;
-    }
-    
-    .menuImg {
-        height: 32px;
-        margin: 12px 0;
     }
 }
 
 @media (min-width: 800px) {
     .menuDiv {
         width: 80px;
-        height: 80px;
+        height: 88px;
         left: 50px;
         top: 50px;
     }
-    
-    .menuImg {
-        height: 44px;
-        margin: 16px 0;
-    }
 }
+
+/* menu content */
 
 .menu {
     display: flex;
@@ -50,7 +37,8 @@
     justify-content: center;
     align-items: center;
     margin: 0;
-    background-color: #1a1e23f0;
+    background-color: #1a1e23fa;
+    /* background-color: #231a22fa; */
     transition: all 0.3s;
     visibility: hidden;
     opacity: 0;   
@@ -102,7 +90,7 @@
 }
 
 .title {
-    font-size: 24px;
+    font-size: 30px;
     color: var(--white);
     overflow: hidden;
 }
