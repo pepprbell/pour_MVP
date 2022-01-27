@@ -1,34 +1,13 @@
 .rear {
     position: relative;
-    width: 1284px;
+    width: 1296px;
     margin: 0 auto;
 }
 
-@media screen and (max-width: 1283px) {
-    .rear {
-        width: 1070px;
-    }
-}
-@media screen and (max-width: 1069px) {
-    .rear {
-        width: 856px;
-    }
-}
-@media screen and (max-width: 855px) {
-    .rear {
-        width: 642px;
-    }
-}
-@media screen and (max-width: 641px) {
-    .rear {
-        width: 428px;
-    }
-}
-
-.genre {
+.blank {
+    display: block;
     width: 100%;
-    height: 180px;
-    background-color: salmon;
+    height: 100px;
 }
 
 .content {
@@ -51,20 +30,52 @@
 
 .category h1 {
     padding: 10px 0;
-}
-
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
+    font-weight: bold;
 }
 
 .main {
-    font-size: 36px;
+    font-size: 3.6rem;
     margin: 30px 0 15px 0;
 }
 
+h1 a {
+    display: block;
+    position: relative;
+    visibility: hidden;
+    top: -140px;
+}
+
 .sub {
-    margin-top: 0;
-    font-size: 24px;
+    margin-top: 10px;
+    font-size: 2.4rem;
+}
+
+.sub a {
+    top: -120px;
+}
+
+@media screen and (max-width: 1295px) {
+    .rear {
+        width: 1080px;
+    }
+}
+@media screen and (max-width: 1079px) {
+    .rear {
+        width: 864px;
+    }
+}
+@media screen and (max-width: 863px) {
+    .rear {
+        width: 648px;
+    }
+}
+@media screen and (max-width: 647px) {
+    .rear {
+        width: 432px;
+    }
+}
+@media screen and (max-width: 431px) {
+    .rear {
+        width: 216px;
+    }
 }
