@@ -4,6 +4,8 @@
   position: relative;
   cursor: pointer;
   width: fit-content;
+  font-size: 30px;
+  font-weight: 500;
   height: 36px;
   margin-bottom: 10px;
 }
@@ -14,7 +16,7 @@
   width: 100%;
   transform: scaleX(0);
   height: 2px;
-  bottom: -7px;
+  bottom: -10px;
   left: 0;
   background-color: var(--white);
   transform-origin: bottom right;
@@ -24,8 +26,4 @@
 .menu:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
-}
-
-.profile {
-
 }
