@@ -25,14 +25,14 @@
     }
     .item img {
         border-radius: 25px;
-        height: 513px;
+        height: 585px;
     }
     .youtube {
         border-radius: 25px;
     }
     .carousel {
-        width: 912px;
-        height: 513px;
+        width: 1040px;
+        height: 585px;
     }
     .carousel > a {
         padding: 50px 15px;
@@ -43,7 +43,7 @@
 }
 
 .container {
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 .carousel > a {
