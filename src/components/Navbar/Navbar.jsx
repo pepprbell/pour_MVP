@@ -1,19 +1,41 @@
 import styles from './Navbar.module.css'
-import logo from '../../assets/mvplogo.png'
+import { useEffect, useState } from 'react'
 
 function Navbar(props) {
+  function handlePosition(id) {
+    window.location.href = '#' + id
+  }
+
+  const main = []
+  const sub = []
+  for (let i = 0; i < props.main.length; i++) {
+    main.push(
+      <input id={props.main[i]} type="radio" name="category" />
+    )
+    main.push(
+      <label className={styles.menu} for={props.main[i]} onClick={() => handlePosition(props.mainhref[i])}>{props.main[i]}</label>
+    )
+  }
+  for (let i = 0; i < props.sub.length; i++) {
+    sub.push(
+      <input id={props.sub[i]} type="radio" name="category"/>
+    )
+    sub.push(
+      <label className={styles.menu} for={props.sub[i]} onClick={() => handlePosition(props.subhref[i])}>{props.sub[i]}</label>
+    )
+  }
+
   return (
-    <div className={styles.navbar}>
-    <div className={styles.max}>
-    <div className={styles.navHome}>
-      <img className={styles.logo} src={logo} alt="" onClick={() => window.location.href="/"}/>
+    <div className={styles.navbar} > 
+      <div className={styles.content}>
+        <div className={styles.main}>
+          {main}
+        </div>
+        <div className={styles.sub}>
+          {sub}
+        </div>
+      </div>
     </div>
-    <div className={styles.navMenu}>
-      <p onClick={() => window.location.href="/"}>Profile</p>
-      <p onClick={() => window.location.href="/create"}>Create</p>
-    </div>
-    </div>
-  </div>
   )
 }
 
