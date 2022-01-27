@@ -39,6 +39,7 @@
   height: 30px;
   width: 20%;
   border-bottom: #aaa solid 1px;
+  font-size: 1.6rem;
 }
 
 .tab input:checked + .tab_item {

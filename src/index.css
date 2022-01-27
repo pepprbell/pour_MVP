@@ -15,6 +15,10 @@ body {
   font-family: 'Noto Sans KR';
 }
 
+html, body {
+  font-size: 62.5%;
+}
+
 a {
   text-decoration: none;
 }
@@ -26,7 +30,3 @@ a {
   --point-sub: #b187c2;
   --content: #f0f0f0;
 }
-
-
-
-

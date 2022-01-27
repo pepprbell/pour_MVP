@@ -1,3 +1,9 @@
 body > div {
     margin: 0 auto;
 }
+
+body > div::-webkit-scrollbar-track {
+    color: salmon;
+    visibility: hidden;
+    opacity: 0;
+  }
