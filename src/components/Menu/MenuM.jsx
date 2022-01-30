@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import styles from './Menu.module.css'
+import styles from './MenuM.module.css'
 import classnames from 'classnames';
 import menu from '../../assets/menu.png'
 import { A } from '..';
 
 
-function Menu() {
+function MenuM(props) {
     const [menuOn, setMenuOn] = useState(0)
 
     // 메뉴 클릭
@@ -18,7 +18,7 @@ function Menu() {
     }
 
     return (
-      <div>
+      <div style={{visibility:props.visible}}>
           <img className={styles.menuDiv} src={menu} onClick={openMenu} alt="" />
         <div className={classnames(styles.menu, (menuOn ? styles.show : styles.menu))}>
           <div className={styles.rear}>
@@ -55,5 +55,5 @@ function Menu() {
     )
 }
 
-export default Menu
+export default MenuM
 
