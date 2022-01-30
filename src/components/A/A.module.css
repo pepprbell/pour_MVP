@@ -1,4 +1,4 @@
-.menu {
+.mobile {
   color: var(--white);
   display: inline-block;
   position: relative;
@@ -10,7 +10,7 @@
   margin-bottom: 10px;
 }
 
-.menu:after {
+.mobile:after {
   content: '';
   position: absolute;
   width: 100%;
@@ -23,7 +23,40 @@
   transition: transform 0.2s ease-out;
 }
 
-.menu:hover:after {
+.mobile:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.web {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: fit-content;
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  height: 26px;
+}
+
+.web:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0px;
+  left: 0;
+  background-color: var(--main);
+  transform-origin: bottom right;
+  transition: transform 0.2s ease-out;
+}
+
+.web:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.web:hover {
+  opacity: 1;
 }

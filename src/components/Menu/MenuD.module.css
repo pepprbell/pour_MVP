@@ -1,0 +1,18 @@
+.menuIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 9;
+    cursor: pointer;
+    width: 60px;
+    height: 66px;
+    left: 45px;
+    top: 35px;
+}
+
+.menu {
+    position: fixed;
+    left: 50px;
+    top: 120px;
+}
