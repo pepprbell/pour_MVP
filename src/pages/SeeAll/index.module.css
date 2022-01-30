@@ -54,28 +54,8 @@ h1 a {
     top: -120px;
 }
 
-@media screen and (max-width: 1295px) {
+@media screen and (max-width: 799px) {
     .rear {
-        width: 1080px;
-    }
-}
-@media screen and (max-width: 1079px) {
-    .rear {
-        width: 864px;
-    }
-}
-@media screen and (max-width: 863px) {
-    .rear {
-        width: 648px;
-    }
-}
-@media screen and (max-width: 647px) {
-    .rear {
-        width: 432px;
-    }
-}
-@media screen and (max-width: 431px) {
-    .rear {
-        width: 216px;
+        width: 95%;
     }
 }
