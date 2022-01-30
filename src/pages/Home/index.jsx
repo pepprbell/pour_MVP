@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import styles from './index.module.css'
 import { useHistory } from "react-router-dom"
 import {
-    Card, Header, Profile, Carousel
+    Card, Profile, ProfileM, Carousel
 } from '../../components'
 
 function Home(props) {
@@ -40,8 +40,8 @@ function Home(props) {
 
     return (
         <div className={styles.container}>
-            {/* <Header></Header> */}
-            <Profile></Profile>
+            <ProfileM display={window.innerWidth>=800 ? "none" : "flex"}></ProfileM>
+            <Profile display={window.innerWidth>=800 ? "flex" : "none"}></Profile>
             <div className={styles.content}>
             <div className={styles.blank}></div>
             <div className={styles.rear}>

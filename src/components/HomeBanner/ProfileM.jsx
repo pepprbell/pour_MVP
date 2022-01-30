@@ -1,4 +1,4 @@
-import styles from './Profile.module.css'
+import styles from './ProfileM.module.css'
 import cafe from '../../assets/cafe.png'
 import alv from '../../assets/allvoice.jpg'
 import insta from '../../assets/insta.png'
@@ -7,7 +7,7 @@ import prof from '../../assets/prof.png'
 import sign from '../../assets/signature.png'
 import classnames from 'classnames';
 
-function Profile(props) {
+function ProfileM(props) {
   const movePage = (href) => {
     window.open(href, "_blank")
   }
@@ -42,10 +42,10 @@ function Profile(props) {
           <p onClick={goTo}>+ 출연작 더보기</p>
         </div>
       </div>
-      <img className={styles.pic} src={prof} alt="" />
-      <img className={styles.sign} src={sign} alt="" />
+      {/* <img className={styles.pic} src={prof} alt="" />
+      <img className={styles.sign} src={sign} alt="" /> */}
     </div>
   )
 }
 
-export default Profile
+export default ProfileM
