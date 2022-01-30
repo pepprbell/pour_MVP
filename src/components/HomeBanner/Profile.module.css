@@ -1,53 +1,98 @@
 .profile {
-    display: block;
+    display: flex;
+    position: relative;
     width: 100%;
-    height: 70vh;
-    max-height: 720px;
-    background-color: black;
+    height: 92vh;
+    background: rgb(240,240,240);
+    background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 31%, rgba(235,235,235,1) 100%);
+    align-items: center;
+    text-align: left;
 }
 
-.profile h1 {
-    font-size: 60px;
-    text-align: left;
-    margin: 0;
-    padding-bottom: 54px;
+.left {
+    margin-left: 320px;
+    z-index: 2;
+}
+
+.desc h1 {
+    font-size: 4.2rem;
+    font-weight: bold;
+    margin: 0 0 30px;
+    padding-bottom: 4px;
+}
+
+.desc p {
+    font-size: 1.6rem;
+    margin-bottom: 2px;
+    font-weight: 500;
 }
 
 .line {
     width: 80px;
     height: 8px;
     background-color: var(--main);
-    margin-bottom: 20px;
+    margin: 28px 0;
 }
 
-.profile span {
-    text-align: left;
+.link {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    margin-right: 10px;
+    object-fit: contain;
+    cursor: pointer;
+    filter: grayscale(1);
+    transition: ease 0.05s;
 }
 
-.profile a {
-    -webkit-text-fill-color: var(--point-sub);
-    text-decoration: none;
-    transition: all 0.25s;
-    text-align: left;
-    padding-top: 5px;
-    display: block;
-    color: inherit;
-    font-weight: bold;
-    width: fit-content;
+.link:hover {
+    filter: grayscale(0.2);
 }
 
-.lov:hover {
-    -webkit-text-fill-color: var(--main);
+.border {
+    border: 2px solid #999;
 }
 
-.insta:hover {
-    background: linear-gradient(-120deg, #5851db, #c13584, #fd1d1d, #e28b3a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.sample {
+    font-size: 1.6rem;
+    font-weight: 500;
 }
 
-.naver:hover {
-    opacity: 1;
-    /* color: #2db400; */
-    -webkit-text-fill-color: #2db400;
+.spacing {
+    font-size: 1.4rem;
+    letter-spacing: 3.5px;
+    margin: 50px 0 30px;
+}
+
+.sample audio {
+    border: 2px solid #777;
+    border-radius: 999px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.sample audio::-webkit-media-controls-panel {
+    background-color: var(--white);
+}
+
+.sample p:last-child {
+    text-align: right;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.pic {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    right: -200px;
+    transform: scaleX(-1);
+    /* filter: grayscale(0.3); */
+}
+
+.sign {
+    /* visibility: hidden; */
+    position: absolute;
+    bottom: 0px;
+    right: 125px;
 }

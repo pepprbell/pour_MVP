@@ -40,10 +40,10 @@ function Home(props) {
 
     return (
         <div className={styles.container}>
-            <Header></Header>
+            {/* <Header></Header> */}
+            <Profile></Profile>
             <div className={styles.content}>
             <div className={styles.blank}></div>
-            <Profile></Profile>
             <div className={styles.rear}>
                 <div className={styles.cards}>
                     <Card type="home"></Card>
