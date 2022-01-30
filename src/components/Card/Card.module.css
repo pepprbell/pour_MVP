@@ -61,25 +61,49 @@
 
 /* --------------seeall-------------- */
 
-.allCard {
-    max-width: 210px;
+@media screen and (max-width: 799px) {    
+    .allImg {
+        width: 170px;
+        height: 97px;
+    }
+    
+    .allH4 {
+        font-size: 16px;
+        margin: 0;
+    }
+    
+    .allA {
+        font-size: 14px;
+    }
+    
+    .allWhite {
+        padding: 5px 10px;
+        min-height: 50px;
+    }
+    
 }
-
-.allImg {
-    width: 210px;
-    height: 120px;
-}
-
-.allH4 {
-    font-size: 16px;
-    margin: 0;
-}
-
-.allA {
-    font-size: 14px;
-}
-
-.allWhite {
-    padding: 5px 10px;
-    min-height: 70px;
+@media screen and (min-width: 800px) {
+    .allCard {
+        max-width: 210px;
+    }
+    
+    .allImg {
+        width: 210px;
+        height: 120px;
+    }
+    
+    .allH4 {
+        font-size: 16px;
+        margin: 0;
+    }
+    
+    .allA {
+        font-size: 14px;
+    }
+    
+    .allWhite {
+        padding: 5px 10px;
+        min-height: 70px;
+    }
+    
 }
