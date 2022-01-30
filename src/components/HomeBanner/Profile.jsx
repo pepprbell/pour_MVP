@@ -34,11 +34,11 @@ function Profile(props) {
         <div className={styles.sample}>
           <p className={styles.spacing}>SAMPLE</p>
           <p>~~하고 ~~한</p>
-          <audio id="voice" controls src={voice} className={styles.audio}></audio>
+          <audio id="voice" controls src="" className={styles.audio}></audio>
           <p>~~하고 ~~한</p>
-          <audio id="voice" controls src={voice} className={styles.audio}></audio>
+          <audio id="voice" controls src="" className={styles.audio}></audio>
           <p>~~하고 ~~한</p>
-          <audio id="voice" controls src={voice} className={styles.audio}></audio>
+          <audio id="voice" controls src="" className={styles.audio}></audio>
           <p onClick={goTo}>+ 출연작 더보기</p>
         </div>
       </div>
