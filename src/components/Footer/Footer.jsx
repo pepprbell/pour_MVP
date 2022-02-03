@@ -5,12 +5,12 @@ function Footer(props) {
         <div className={styles.footer}>
             <div className={styles.footerContent}>
                 <div className={styles.fCard}>
-                    <p>for us. &nbsp;Made by @bellpeppr</p>
+                    {/* <p>for us.</p> */}
                 </div>
                 <div className={styles.fCard}>
                 </div>
                 <div className={styles.fCard}>          
-                    <p className={styles.right}></p>
+                    <p className={styles.right}>Contact : pepprbell@gmail.com</p>
                 </div>
             </div>
         </div>
