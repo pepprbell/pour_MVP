@@ -1,39 +1,36 @@
 import styles from './Navbar.module.css'
 import { useEffect, useState } from 'react'
+import {
+  Hamburger, MenuD
+} from '../index'
 
 function Navbar(props) {
-  function handlePosition(id) {
+  const goTo = (id) => {
     window.location.href = '#' + id
   }
 
-  const main = []
+  // const mainKr = ['더빙','광고','외화','오디오북','기타']
+  // const mainEn = ['dubbing','ad','foreign','audiobook','short']
+  const subKr = ['TV 애니메이션', '극장 애니메이션', '게임', '드라마CD', '오디오드라마', '특촬']
+  const subEn = ['tv', 'theater', 'game', 'dramacd', 'audiodrama', 'kamen']
+
   const sub = []
-  for (let i = 0; i < props.main.length; i++) {
-    main.push(
-      <input id={props.main[i]} type="radio" name="category" />
-    )
-    main.push(
-      <label className={styles.menu} for={props.main[i]} onClick={() => handlePosition(props.mainhref[i])}>{props.main[i]}</label>
-    )
-  }
-  for (let i = 0; i < props.sub.length; i++) {
+  for (let i = 0; i < subKr.length; i++) {
     sub.push(
-      <input id={props.sub[i]} type="radio" name="category"/>
-    )
-    sub.push(
-      <label className={styles.menu} for={props.sub[i]} onClick={() => handlePosition(props.subhref[i])}>{props.sub[i]}</label>
+      <p for={subKr[i]} onClick={() => goTo(subEn[i])}>{subKr[i]}</p>
     )
   }
 
   return (
-    <div className={styles.navbar} > 
+    <div className={styles.navbar}>
       <div className={styles.content}>
-        <div className={styles.main}>
-          {main}
-        </div>
-        <div className={styles.sub}>
-          {sub}
-        </div>
+        {sub}
+        {/* <p onClick={() => {goTo('dubbing')}}>더빙</p>
+        <p onClick={() => {goTo('ad')}}>광고</p>
+        <p onClick={() => {goTo('foreign')}}>외화</p>
+        <p onClick={() => {goTo('audiobook')}}>오디오북</p>
+        <p onClick={() => {goTo('short')}}>단역</p> */}
+        <button className={styles.right}><i class="fas fa-chevron-right"></i></button>
       </div>
     </div>
   )
