@@ -1,8 +1,5 @@
 import styles from './Carousel.module.css'
 import YouTube from 'react-youtube';
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-import Slider from 'react-slick'
 import classnames from 'classnames';
 import none from '../../../assets/none.png'
 import cola from '../../../assets/cocacola.jpg'
@@ -61,8 +58,17 @@ function Carousel(params) {
   }
 
   // play youtube
-  function clickImage() {
+  function clickImage(num) {
     setYoutubeOn(true)
+    if (num === 0) {
+      vid0.current.internalPlayer.playVideo()
+    }
+    if (num === 1) {
+      vid1.current.internalPlayer.playVideo()
+    }
+    if (num === 2) {
+      vid2.current.internalPlayer.playVideo()
+    }
   }
 
   // stop youtube
@@ -72,9 +78,9 @@ function Carousel(params) {
   }
 
   function stopYoutube() {
-    vid0.current.internalPlayer.pauseVideo()
-    vid1.current.internalPlayer.pauseVideo()
-    vid2.current.internalPlayer.pauseVideo()
+    vid0.current.internalPlayer.stopVideo()
+    vid1.current.internalPlayer.stopVideo()
+    vid2.current.internalPlayer.stopVideo()
   }
 
   return (
@@ -84,7 +90,7 @@ function Carousel(params) {
           <div className={youtubeOn ? styles.on : styles.off}>
             <YouTube className={styles.youtube} videoId={videoId[0]} opts={opts} ref={vid0}></YouTube>
           </div>
-          <img className="d-block w-100" src={thumb[0]} alt="First slide" onClick={clickImage}/>
+          <img className="d-block w-100" src={thumb[0]} alt="First slide" onClick={() => {clickImage(0)}}/>
           <Carousels.Caption className={styles.caption}>
             <h5>{name[0]}</h5>
           </Carousels.Caption>
@@ -93,7 +99,7 @@ function Carousel(params) {
           <div className={youtubeOn ? styles.on : styles.off}>
             <YouTube className={styles.youtube} videoId={videoId[1]} opts={opts} ref={vid1}></YouTube>
           </div>
-          <img className="d-block w-100" src={thumb[1]} alt="Second slide" onClick={clickImage}/>
+          <img className="d-block w-100" src={thumb[1]} alt="Second slide" onClick={() => {clickImage(1)}}/>
           <Carousels.Caption className={styles.caption}>
             <h5>{name[1]}</h5>
           </Carousels.Caption>
@@ -102,7 +108,7 @@ function Carousel(params) {
           <div className={youtubeOn ? styles.on : styles.off}>
             <YouTube className={styles.youtube} videoId={videoId[2]} opts={opts} ref={vid2}></YouTube>
           </div>
-          <img className="d-block w-100" src={thumb[2]} alt="Second slide" onClick={clickImage}/>
+          <img className="d-block w-100" src={thumb[2]} alt="Second slide" onClick={() => {clickImage(2)}}/>
           <Carousels.Caption className={styles.caption}>
             <h5>{name[2]}</h5>
           </Carousels.Caption>

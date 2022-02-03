@@ -1,9 +1,22 @@
 .profile {
     width: 100vw;
+    height: 100vh;
     background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 31%, rgba(235,235,235,1) 100%);
     text-align: left;
     justify-items: center;
-    padding: 110px 30px 80px 30px;
+    padding: 110px 30px 0px 30px;
+}
+
+
+@media (min-width: 800px) {
+    .profile {
+        display: none;
+    }
+}
+@media (max-width: 799px) {
+    .profile {
+        display: flex;
+    }
 }
 
 .left {
@@ -11,9 +24,9 @@
 }
 
 .desc h1 {
-    font-size: 4.2rem;
+    font-size: 3.6rem;
     font-weight: bold;
-    margin: 0 0 30px;
+    margin: 0 0 20px;
     padding-bottom: 4px;
 }
 
@@ -27,7 +40,7 @@
     width: 80px;
     height: 8px;
     background-color: var(--main);
-    margin: 28px 0;
+    margin: 24px 0;
 }
 
 .link {
@@ -54,7 +67,7 @@
 .spacing {
     font-size: 1.4rem;
     letter-spacing: 3.5px;
-    margin: 50px 0 30px;
+    margin: 40px 0 20px;
 }
 
 .sample audio {

@@ -17,7 +17,7 @@ function Profile(props) {
   }
 
   return (
-    <div className={styles.profile} style={{display:props.display}}>
+    <div className={styles.profile}>
       <div className={styles.left}>
         <div className={styles.desc}>
           <h1>민승우</h1>
