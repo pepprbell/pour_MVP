@@ -7,8 +7,8 @@
 .blank {
     display: block;
     width: 100%;
-    height: 100px;
-}
+    height: 44px;
+    }
 
 .content {
     margin-bottom: 200px;
@@ -42,7 +42,7 @@ h1 a {
     display: block;
     position: relative;
     visibility: hidden;
-    top: -140px;
+    top: -80px;
 }
 
 .sub {
@@ -51,7 +51,7 @@ h1 a {
 }
 
 .sub a {
-    top: -120px;
+    top: -70px;
 }
 
 @media screen and (max-width: 799px) {

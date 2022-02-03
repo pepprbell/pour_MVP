@@ -26,11 +26,6 @@ function SeeAll(props) {
     const [short, setShort] = useState({})
     const [isLoading, setIsLoading] = useState(true)
 
-    const main = ['더빙','광고','외화','오디오북','기타']
-    const mainEn = ['dubbing','ad','foreign','audiobook','short']
-    const sub = ['TV 애니메이션', '극장 애니메이션', '게임', '드라마CD', '오디오드라마', '특촬']
-    const subEn = ['tv', 'theater', 'game', 'dramacd', 'audiodrama', 'kamen']
-
     useEffect(() => {
         if (history.location.state != undefined) {
             move()
@@ -64,9 +59,9 @@ function SeeAll(props) {
     // } else {
     return (
         <div className={styles.container}>
-        <Navbar main={main} mainhref={mainEn} sub={sub} subhref={subEn}></Navbar>
+        <div className={styles.blank}></div>
+        <Navbar></Navbar>
         <div className={styles.rear}>
-            <div className={styles.blank}>123</div>
             <div className={styles.content}>
                 <div className={styles.category}>
                     <h1 className={styles.main}><a id='dubbing'></a>더빙</h1>
