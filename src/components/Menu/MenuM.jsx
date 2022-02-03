@@ -2,58 +2,63 @@ import { useState } from 'react'
 import styles from './MenuM.module.css'
 import classnames from 'classnames';
 import menu from '../../assets/menu.png'
+import sml from '../../assets/sml.png'
+import up from '../../assets/up.png'
 import { A } from '..';
+import {
+  Hamburger, MenuD
+} from '../'
 
 
 function MenuM(props) {
-    const [menuOn, setMenuOn] = useState(0)
+  const [menuOn, setMenuOn] = useState(0)
 
-    // 메뉴 클릭
-    function openMenu() {
-        if (menuOn === 0) {
-            setMenuOn(1)
-        } else {
-            setMenuOn(0)
-        }
-    }
+  // 메뉴 클릭
+  const openMenu = () => {
+      if (menuOn === 0) {
+          setMenuOn(1)
+      } else {
+          setMenuOn(0)
+      }
+  }
 
-    return (
-      <div style={{visibility:props.visible}}>
-          <img className={styles.menuDiv} src={menu} onClick={openMenu} alt="" />
-        <div className={classnames(styles.menu, (menuOn ? styles.show : styles.menu))}>
-          <div className={styles.rear}>
-            <div className={styles.flex}>
-              <ul className={styles.ul}>
-                <li className={styles.li}><A value="홈" goTo="/"></A></li>
-                <li className={styles.li}><A value="데이터 생성" goTo="/create"></A></li>
-                <li className={styles.li}><A value="See All" goTo="/seeall"></A></li>
-              </ul>
-            </div>
-            <div className={styles.gallery}>
-              <div className={styles.title}>
-                <p>Current</p>
-              </div>
-              <div className={styles.images}>
-                <a className={styles.imageLink} href="#">
-                  <div className={styles.image} data-label="star"><img src="https://i.loli.net/2019/11/23/cnKl1Ykd5rZCVwm.jpg" alt=""/></div>
-                </a>
-                <a className={styles.imageLink} href="#">
-                  <div className={styles.image}><img src="https://i.loli.net/2019/11/16/FLnzi5Kq4tkRZSm.jpg" alt=""/></div>
-                </a>
-                <a className={styles.imageLink} href="#">
-                  <div className={styles.image}><img src="https://i.loli.net/2019/10/18/uXF1Kx7lzELB6wf.jpg" alt=""/></div>
-                </a>
-                <a className={styles.imageLink} href="#">
-                  <div className={styles.image}><img src="https://i.loli.net/2019/10/18/buDT4YS6zUMfHst.jpg" alt=""/></div>
-                </a>
-              </div>
-            </div>
-            </div>
-        </div>
+  const goHome = () => {
+    window.location.pathname = '/'
+  }
+
+  const goUp = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const goTo = (path) => {
+    window.location.pathname = '/'+path
+  }
+
+  return (
+    <div className={styles.container}>
+    <div className={styles.navbar}>
+      <Hamburger onclick={openMenu}></Hamburger>
+      <img className={styles.goHome} src={sml} alt="" onClick={goHome} />
+      <img className={classnames(styles.goUp, (menuOn ? styles.hidden : styles.goUp))} src={up} alt="" onClick={goUp} />
+    </div>
+    <div>
+      <div className={classnames(styles.menu, (menuOn ? styles.show : styles.menu))}>
+      <div className={styles.search}>
+        <input type="text" placeholder={"검색 기능 준비 중"} disabled/>
       </div>
-        
-    )
+        <ul>
+          <li onClick={() => {goTo("")}}>홈</li>
+          <li onClick={() => {goTo("seeall")}}>출연작</li>
+          <li onClick={() => {goTo("seeall#dubbing")}}>더빙</li>
+          <li onClick={() => {goTo("")}}>광고</li>
+          <li onClick={() => {goTo("")}}>외화</li>
+          <li onClick={() => {goTo("")}}>오디오북</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+    
+  )
 }
 
 export default MenuM
-
