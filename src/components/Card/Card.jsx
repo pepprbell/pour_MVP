@@ -9,7 +9,7 @@ function Card(props) {
   // console.log(props.first)
   
   return (
-    <div className={classnames(styles.card, (props.type ? styles.homeCard : styles.allCard))}>
+    <div className={classnames(styles.card, (props.type ? styles.homeCard : styles.allCard))} style={{visibility:props.visible}}>
     <img className={(props.type ? styles.homeImg : styles.allImg)} src={none} alt="" />
     <div className={classnames(styles.white, (props.type ? styles.homeWhite : styles.allWhite))}>
       <div className={(props.type ? styles.homeDiv : styles.allDiv)}>

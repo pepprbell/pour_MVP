@@ -20,6 +20,14 @@ function Cards(props) {
             }
         }
     }
+    if (cards.length%4) {
+        for (let i = 0; i < cards.length%4; i++) {
+            cards.push(
+                <Card visible="hidden"></Card>
+            )
+        }
+    }
+
     return (
         <div className={styles.cards}>
             {cards}

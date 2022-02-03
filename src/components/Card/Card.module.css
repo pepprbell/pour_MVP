@@ -62,6 +62,10 @@
 /* --------------seeall-------------- */
 
 @media screen and (max-width: 799px) {    
+    .allCard {
+        max-width: 170px;
+    }
+
     .allImg {
         width: 170px;
         height: 97px;
