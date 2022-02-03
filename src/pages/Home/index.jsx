@@ -40,9 +40,9 @@ function Home(props) {
 
     return (
         <div className={styles.container}>
-            <ProfileM display={window.innerWidth>=800 ? "none" : "flex"}></ProfileM>
-            <Profile display={window.innerWidth>=800 ? "flex" : "none"}></Profile>
-            <div className={styles.content}>
+            <ProfileM></ProfileM>
+            <Profile></Profile>
+            {/* <div className={styles.content}>
             <div className={styles.blank}></div>
             <div className={styles.rear}>
                 <div className={styles.cards}>
@@ -60,7 +60,7 @@ function Home(props) {
                 </div>
                 <Carousel content='etc'></Carousel>
             </div>
-            </div>
+            </div> */}
         </div>
     )
 }
