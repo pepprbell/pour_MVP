@@ -16,9 +16,9 @@ function MenuD(props) {
 
     return (
       <div className={styles.container}>
-        <img className={styles.menuIcon} src={menu} alt="" onClick={goHome}/>
-        <div className={classnames(styles.menu)}>
-            <A type="web" value="홈" goTo="/"></A>
+        <img className={styles.menuIcon} src={menu} alt="" onClick={goHome}/>   
+        <div className={classnames(styles.menu, (window.location.pathname === '/' ? '' : styles.hidden))}>
+            {/* <A type="web" value="홈" goTo="/"></A> */}
             <A type="web" value="출연작" goTo="/seeall"></A>
         </div>
         <div className={(window.location.pathname === '/' ? styles.hidden : '')}>

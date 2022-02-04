@@ -61,7 +61,32 @@
 
 /* --------------seeall-------------- */
 
-@media screen and (max-width: 799px) {    
+@media screen and (max-width: 549px) {    
+    .allCard {
+        max-width: 45vw;
+    }
+
+    .allImg {
+        width: 45vw;
+        height: 25.7vw;
+    }
+    
+    .allH4 {
+        font-size: 16px;
+        margin: 0;
+    }
+    
+    .allA {
+        font-size: 14px;
+    }
+    
+    .allWhite {
+        padding: 5px 10px;
+        min-height: 50px;
+    }
+    
+}
+@media screen and (min-width: 550px) and (max-width: 799px) {    
     .allCard {
         max-width: 170px;
     }
