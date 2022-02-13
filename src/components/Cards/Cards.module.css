@@ -2,12 +2,12 @@
     display: flex;
     flex-wrap: wrap;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1296px) {
     .cards {
         justify-content: left;
     }
 }
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 1295px) {
     .cards {
         justify-content: space-around;
     }

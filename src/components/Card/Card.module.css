@@ -3,7 +3,7 @@
 .card {
     position: relative;
     margin-right: 6px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
     margin-bottom: 20px;
     /* padding-bottom: 20px; */
     word-break: break-all;
