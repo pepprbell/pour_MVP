@@ -1,12 +1,10 @@
 import { useState } from 'react'
 import styles from './MenuM.module.css'
 import classnames from 'classnames';
-import menu from '../../assets/menu.png'
 import sml from '../../assets/sml.png'
 import up from '../../assets/up.png'
-import { A } from '..';
 import {
-  Hamburger, MenuD
+  Hamburger
 } from '../'
 
 
@@ -52,7 +50,7 @@ function MenuM(props) {
           <li onClick={() => {goTo("seeall#dubbing")}}>더빙</li>
           <li onClick={() => {goTo("")}}>광고</li>
           <li onClick={() => {goTo("")}}>외화</li>
-          <li onClick={() => {goTo("")}}>오디오북</li>
+          <li onClick={() => {goTo("audiobook")}}>오디오북</li>
         </ul>
       </div>
     </div>

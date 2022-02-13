@@ -29,7 +29,6 @@
     width: 24px;
     height: 24px;
     opacity: 0.75;
-    cursor: pointer;
 }
 
 .goUp {
@@ -37,7 +36,6 @@
     height: 24px;
     padding: 2px;
     opacity: 0.95;
-    cursor: pointer;
     transition: ease-in-out 0.3s;
 }
 
@@ -60,7 +58,7 @@
     width: 94%;
     height: 34px;
     margin: 7px 3%;
-    padding: 5%;
+    padding: 5px 20px;
 }
 
 /* menu content */
