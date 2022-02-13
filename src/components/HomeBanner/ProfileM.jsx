@@ -21,8 +21,9 @@ function ProfileM(props) {
       <div className={styles.left}>
         <div className={styles.desc}>
           <h1>민승우</h1>
-          <p>대교방송 성우극회 6기 (2014)</p>
+          <p>대교방송 성우극회 6기</p>
           <p>1986. 11. 3.</p>
+          <img className={styles.profilePic} src={prof} alt="" />
           <div className={styles.line}></div>
           <div>
             <img className={classnames(styles.link, styles.border)} src={lov} alt="" onClick={() => {movePage("https://lordofvoice.com/seungwoo")}}/>
