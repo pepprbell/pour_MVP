@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 import styles from './App.module.css'
 import {
-  Home, SeeAll, Create,
+  Home, SeeAll, Create, Audiobook
 } from './pages'
 import {
   MenuM, MenuD, Footer, Navbar
@@ -13,12 +13,13 @@ import { useState } from 'react';
 function App() {
   return (
     <div>
-      <MenuD></MenuD>
-      <MenuM></MenuM>
       <BrowserRouter>
+        <MenuD></MenuD>
+        <MenuM></MenuM>
         <Route exact path='/' component={ Home }></Route>
         <Route path='/seeall' component={ SeeAll }></Route>
         <Route path='/create' component={ Create }></Route>
+        <Route path='/audiobook' component={ Audiobook }></Route>
         {/* <Route path='/' component={  }></Route> */}
       </BrowserRouter>
       {/* <Footer></Footer> */}
