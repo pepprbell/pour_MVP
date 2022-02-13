@@ -8,18 +8,6 @@ import {
 function Home(props) {
     const history = useHistory()
 
-    useEffect(() => {
-    }, [])
-
-    // 스크롤 컨트롤
-
-    const goUp = () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-    })
-    }
-
     // 카드 클릭시 모달
     // const [modalOn, setModalOn] = useState(false)
     

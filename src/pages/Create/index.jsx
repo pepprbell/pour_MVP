@@ -5,11 +5,10 @@ import {
 } from '../../components'
 import awsConfig from '../../aws-exports.js'
 import { Amplify } from '@aws-amplify/core'
-
 import { DataStore } from '@aws-amplify/datastore'
 import { Short, Ad, Audiobook, Dubbing, Foreign } from '../../models'
 
-Amplify.configure(awsConfig)
+// Amplify.configure(awsConfig)
 
 function Create() {
 
@@ -23,7 +22,7 @@ function Create() {
 
   const [selected, setSelected] = useState(dubbing)
 
-  function handleType(type) {
+  const handleType = (type) => {
     if (type==="dubbing") {
       setSelected(dubbing)
     }
@@ -50,7 +49,7 @@ function Create() {
   const [input3, setInput3] = useState('')
   const [type, setType] = useState('tv')
 
-  function handleInput(num,e) {
+  const handleInput = (num,e) => {
     if (num===0) {
       setInput1(e.target.value)
     }
@@ -73,59 +72,55 @@ function Create() {
     )
   }
 
-  function submit() {
-    if (selected[3][0]==='tv') {
-      const saveForm = {
-        "Character": input1,
-        "Content": input2,
-        "Type": type,
-      }
-      console.log(saveForm)
-      DataStore.save(
-        new Dubbing(saveForm)
-      )
-    }
-    if (selected[3][0]==='ad') {
-      const saveForm = {
-        "Ad": input1,
-      }
-      console.log(saveForm)
-      DataStore.save(
-        new Ad(saveForm)
-      )
-    }
-    if (selected[3][0]==='foreign') {
-      const saveForm = {
-        "Character": input1,
-        "Content": input2,
-        "Actor": input3,
-      }
-      console.log(saveForm)
-      DataStore.save(
-        new Foreign(saveForm)
-      )
-    }
-    if (selected[3][0]==='audiobook') {
-      const saveForm = {
-        "Author": input1,
-        "Book": input2,
-      }
-      console.log(saveForm)
-      DataStore.save(
-        new Audiobook(saveForm)
-      )
-    }
-    if (selected[3][0]==='short') {
-      const saveForm = {
-        "Character": input1,
-        "Content": input2,
-      }
-      console.log(saveForm)
-      DataStore.save(
-        new Short(saveForm)
-      )
-    }
-  }
+  const submit = ''
+  // const submit = () => {
+  //   if (selected[3][0]==='tv') {
+  //     const saveForm = {
+  //       "Character": input1,
+  //       "Content": input2,
+  //       "Type": type,
+  //     }
+  //     DataStore.save(
+  //       new Dubbing(saveForm)
+  //     )
+  //   }
+  //   if (selected[3][0]==='ad') {
+  //     const saveForm = {
+  //       "Ad": input1,
+  //     }
+  //     DataStore.save(
+  //       new Ad(saveForm)
+  //     )
+  //   }
+  //   if (selected[3][0]==='foreign') {
+  //     const saveForm = {
+  //       "Character": input1,
+  //       "Content": input2,
+  //       "Actor": input3,
+  //     }
+  //     DataStore.save(
+  //       new Foreign(saveForm)
+  //     )
+  //   }
+  //   if (selected[3][0]==='audiobook') {
+  //     const saveForm = {
+  //       "Author": input1,
+  //       "Book": input2,
+  //     }
+  //     DataStore.save(
+  //       new Audiobook(saveForm)
+  //     )
+  //   }
+  //   if (selected[3][0]==='short') {
+  //     const saveForm = {
+  //       "Character": input1,
+  //       "Content": input2,
+  //     }
+  //     DataStore.save(
+  //       new Short(saveForm)
+  //     )
+  //   }
+  // }
 
   return (
     <div className={styles.bg}>
