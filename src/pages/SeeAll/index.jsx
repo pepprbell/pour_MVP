@@ -15,7 +15,7 @@ Amplify.configure(awsConfig)
 
 function SeeAll(props) {
     const history = useHistory()
-    function move() {
+    const move = () => {
         window.location.href = '#' + history.location.state.type
     }
 
@@ -52,6 +52,9 @@ function SeeAll(props) {
             })
     }
 
+    const subKr = ['TV 애니메이션', '극장 애니메이션', '게임', '드라마CD', '오디오드라마', '특촬']
+    const subEn = ['tv', 'theater', 'game', 'dramacd', 'audiodrama', 'kamen']
+
     // if (isLoading) {
     //     return (
     //         <div>loading</div>
@@ -59,8 +62,7 @@ function SeeAll(props) {
     // } else {
     return (
         <div className={styles.container}>
-        <div className={styles.blank}></div>
-        <Navbar></Navbar>
+        <Navbar subKr={subKr} subEn={subEn}></Navbar>
         <div className={styles.rear}>
             <div className={styles.content}>
                 <div className={styles.category}>
