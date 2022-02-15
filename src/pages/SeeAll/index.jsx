@@ -5,7 +5,7 @@ import {
 import styles from './index.module.css'
 
 import { DataStore } from '@aws-amplify/datastore'
-import { Short, Ad, Dubbing, Audiobook, Foreign } from '../../models'
+import { Audiobook } from '../../models'
 
 import awsConfig from '../../aws-exports.js'
 import { Amplify } from '@aws-amplify/core'
@@ -38,18 +38,18 @@ function SeeAll(props) {
         DataStore.query(Audiobook).then(res => {
             setAudiobook(res)
             })
-        DataStore.query(Dubbing).then(res => {
-            setDubbing(res)
-            })
-        DataStore.query(Short).then(res => {
-            setShort(res)
-            })
-        DataStore.query(Foreign).then(res => {
-            setForeign(res)
-            })
-        DataStore.query(Ad).then(res => {
-            setAd(res)
-            })
+        // DataStore.query(Dubbing).then(res => {
+        //     setDubbing(res)
+        //     })
+        // DataStore.query(Short).then(res => {
+        //     setShort(res)
+        //     })
+        // DataStore.query(Foreign).then(res => {
+        //     setForeign(res)
+        //     })
+        // DataStore.query(Ad).then(res => {
+        //     setAd(res)
+        //     })
     }
 
     const subKr = ['TV 애니메이션', '극장 애니메이션', '게임', '드라마CD', '오디오드라마', '특촬']
