@@ -2,11 +2,9 @@
 
 .card {
     position: relative;
-    margin-right: 6px;
-    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
-    margin-bottom: 20px;
-    /* padding-bottom: 20px; */
+    margin: 0 7.5px 20px;
     word-break: break-all;
+    cursor: pointer;
 }
 
 .white {
@@ -16,21 +14,38 @@
     height: fit-content;
     margin: 5px 0;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
-.card a {
-    text-decoration: none;
-    color: var(--main);
-    margin: 0;
-}
-
-.card a:hover {
-    color: var(--main);
-}
-
-.card img {
+.img {
     object-fit: cover;
+    transition: all 0.4s;
     /* border-radius: 15px; */
+}
+
+.img:hover {
+    transform: scale(1.2);
+}
+
+figure {
+    overflow: hidden;
+}
+
+.first {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+    line-height: 2rem;
+    max-height: 4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.second {
+    width: 100%;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    line-height: 1.8rem;
 }
 
 /* ---------------home--------------- */
@@ -62,22 +77,14 @@
 /* --------------seeall-------------- */
 
 @media screen and (max-width: 549px) {    
-    .allCard {
+    .card {
         max-width: 45vw;
+        margin: 0 3px 20px;
     }
 
-    .allImg {
+    .img {
         width: 45vw;
-        height: 25.7vw;
-    }
-    
-    .allH4 {
-        font-size: 16px;
-        margin: 0;
-    }
-    
-    .allA {
-        font-size: 14px;
+        height: 45vw;
     }
     
     .allWhite {
@@ -87,22 +94,14 @@
     
 }
 @media screen and (min-width: 550px) and (max-width: 799px) {    
-    .allCard {
+    .card {
         max-width: 170px;
+        margin: 0 5px 20px;
     }
 
-    .allImg {
+    .img {
         width: 170px;
-        height: 97px;
-    }
-    
-    .allH4 {
-        font-size: 16px;
-        margin: 0;
-    }
-    
-    .allA {
-        font-size: 14px;
+        height: 170px;
     }
     
     .allWhite {
@@ -112,22 +111,13 @@
     
 }
 @media screen and (min-width: 800px) {
-    .allCard {
-        max-width: 210px;
+    .card {
+        max-width: 201px;
     }
     
-    .allImg {
-        width: 210px;
-        height: 120px;
-    }
-    
-    .allH4 {
-        font-size: 16px;
-        margin: 0;
-    }
-    
-    .allA {
-        font-size: 14px;
+    .img {
+        width: 201px;
+        height: 201px;
     }
     
     .allWhite {

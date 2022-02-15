@@ -4,18 +4,19 @@ import classnames from 'classnames';
 import { useState } from 'react'
 
 function Card(props) {
-  //  type: home, seeall, 
-  // className={classnames(styles.menu, (menuOn ? styles.show : styles.menu))}
-  // console.log(props.first)
+
+  const movePage = () => {
+    window.open(props.query.Link, "_blank")
+  }
   
   return (
-    <div className={classnames(styles.card, (props.type ? styles.homeCard : styles.allCard))} style={{visibility:props.visible}}>
-    <img className={(props.type ? styles.homeImg : styles.allImg)} src={none} alt="" />
+    <div className={classnames(styles.card, (props.type ? styles.homeCard : styles.allCard))} style={{visibility:props.visible}} onClick={movePage}>
+    <figure><img className={styles.img} src={props.query ? props.query.Image : none} alt="" /></figure>
     <div className={classnames(styles.white, (props.type ? styles.homeWhite : styles.allWhite))}>
       <div className={(props.type ? styles.homeDiv : styles.allDiv)}>
-        <h4 className={(props.type ? styles.homeH4 : styles.allH4)}>{props.first}</h4>
-        <a className={(props.type ? styles.homeA : styles.allA)} href={props.href}>{props.second}</a>
-        <a className={(props.type ? styles.homeA : styles.allA)}>{props.third}</a>
+        <h4 className={styles.first}>{props.first}</h4>
+        <p className={styles.second} href={props.href}>{props.second}</p>
+        <p className={styles.second}>{props.third}</p>
       </div>
     </div>
   </div>
