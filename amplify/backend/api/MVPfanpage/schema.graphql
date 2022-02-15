@@ -1,37 +1,8 @@
-type Short @model @auth(rules: [{allow: public}]) {
-  id: ID!
-  Character: String!
-  Content: String!
-  Image: AWSURL
-}
-
-type Foreign @model @auth(rules: [{allow: public}]) {
-  id: ID!
-  Actor: String!
-  Content: String!
-  Character: String!
-}
-
 type Audiobook @model @auth(rules: [{allow: public}]) {
   id: ID!
   Author: String!
   Book: String!
+  Image: AWSURL
   Link: AWSURL
+  Date: AWSDate
 }
-
-type Ad @model @auth(rules: [{allow: public}]) {
-  id: ID!
-  Ad: String!
-  Image: AWSURL
-  Voice: AWSURL
-}
-
-type Dubbing @model @auth(rules: [{allow: public}]) {
-  id: ID!
-  Character: String!
-  Content: String!
-  Type: String!
-  Image: AWSURL
-  Voice: AWSURL
-}
- 

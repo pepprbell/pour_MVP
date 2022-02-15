@@ -1,12 +1,13 @@
 export type AmplifyDependentResourcesAttributes = {
     "api": {
         "MVPfanpage": {
+            "GraphQLAPIKeyOutput": "string",
             "GraphQLAPIIdOutput": "string",
             "GraphQLAPIEndpointOutput": "string"
         }
     },
     "auth": {
-        "MVPfanpage": {
+        "mvpfanpagec9dfdcf2": {
             "IdentityPoolId": "string",
             "IdentityPoolName": "string",
             "UserPoolId": "string",
