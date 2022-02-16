@@ -51,7 +51,7 @@
     object-fit: contain;
     cursor: pointer;
     filter: grayscale(1);
-    transition: ease 0.05s;
+    transition: 0.15s;
 }
 
 .link:hover {
@@ -59,6 +59,7 @@
 }
 
 .border {
+    background-color: #fff;
     border: 2px solid #999;
 }
 
@@ -92,15 +93,16 @@
 
 .pic {
     position: absolute;
-    height: 100%;
-    bottom: 0;
-    right: -200px;
-    transform: scaleX(-1);
+    height: 700px;
+    right: 250px;
+    bottom: 100px;
+    /* right: -200px; */
+    /* transform: scaleX(-1); */
     /* filter: grayscale(0.3); */
 }
 
 .sign {
-    /* visibility: hidden; */
+    visibility: hidden;
     position: absolute;
     bottom: 0px;
     right: 125px;
