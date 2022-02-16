@@ -20,7 +20,6 @@ function Navbar(props) {
     <div className={styles.navbar}>
       <div className={styles.content}>
         {sub}
-        <button className={styles.right}><i class="fas fa-chevron-right"></i></button>
       </div>
     </div>
   )

@@ -1,0 +1,83 @@
+/* --------------global-------------- */
+
+.card {
+    position: relative;
+    word-break: break-all;
+    cursor: pointer;
+}
+
+.white {
+    display: flex;
+    text-align: left;
+    width: 100%;
+    height: fit-content;
+    margin: 5px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.first {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+    line-height: 2rem;
+    max-height: 4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.second {
+    width: 100%;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    line-height: 1.8rem;
+}
+
+@media screen and (max-width: 549px) {    
+    .card {
+        max-width: 45vw;
+    }
+
+    .img {
+        width: 45vw;
+        height: 45vw;
+    }
+    
+    .white {
+        padding: 5px 10px;
+        min-height: 50px;
+    }
+    
+}
+@media screen and (min-width: 550px) and (max-width: 799px) {    
+    .card {
+        max-width: 170px;
+    }
+
+    .img {
+        width: 170px;
+        height: 170px;
+    }
+    
+    .white {
+        padding: 5px 10px;
+        min-height: 50px;
+    }
+    
+}
+@media screen and (min-width: 800px) {
+    .card {
+        max-width: 201px;
+    }
+    
+    .img {
+        width: 416px;
+        height: 234px;
+    }
+    
+    .white {
+        padding: 5px 10px;
+        min-height: 70px;
+    }
+    
+}
