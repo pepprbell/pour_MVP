@@ -2,11 +2,5 @@
   "AppSyncApiName": "MVPfanpage",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
   "DynamoDBEnableServerSideEncryption": false,
-  "AuthCognitoUserPoolId": {
-    "Fn::GetAtt": [
-      "authmvpfanpagec9dfdcf2",
-      "Outputs.UserPoolId"
-    ]
-  },
-  "AuthModeLastUpdated": "2022-02-14T11:13:47.768Z"
+  "AuthModeLastUpdated": "2022-02-15T09:39:49.991Z"
 }

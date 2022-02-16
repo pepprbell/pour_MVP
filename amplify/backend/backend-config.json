@@ -9,17 +9,11 @@
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
               "apiKeyExpirationDays": 365,
-              "apiKeyExpirationDate": "2023-02-14T11:13:41.160Z",
+              "apiKeyExpirationDate": "2023-02-15T09:39:42.584Z",
               "description": ""
             }
           },
           "additionalAuthenticationProviders": [
-            {
-              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
-              "userPoolConfig": {
-                "userPoolId": "authmvpfanpagec9dfdcf2"
-              }
-            },
             {
               "authenticationType": "AWS_IAM"
             }
