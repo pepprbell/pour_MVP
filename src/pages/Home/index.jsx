@@ -30,25 +30,6 @@ function Home(props) {
         <div className={styles.container}>
             <ProfileM></ProfileM>
             <Profile></Profile>
-            {/* <div className={styles.content}>
-            <div className={styles.blank}></div>
-            <div className={styles.rear}>
-                <div className={styles.cards}>
-                    <Card type="home"></Card>
-                    <Card type="home"></Card>
-                    <Card type="home"></Card>
-                    <Card type="home"></Card>
-                </div>
-                <Carousel></Carousel>
-                <div className={styles.cards}>
-                    <Card type="home"></Card>
-                    <Card type="home"></Card>
-                    <Card type="home"></Card>
-                    <Card type="home"></Card>
-                </div>
-                <Carousel content='etc'></Carousel>
-            </div>
-            </div> */}
         </div>
     )
 }
