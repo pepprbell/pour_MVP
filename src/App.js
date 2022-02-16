@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 import styles from './App.module.css'
 import {
-  Home, SeeAll, Create, Audiobook
+  Home, SeeAll, Create, Audiobook, Ad
 } from './pages'
 import {
   MenuM, MenuD, Footer, Navbar
@@ -19,6 +19,7 @@ function App() {
         <Route exact path='/' component={ Home }></Route>
         <Route path='/seeall' component={ SeeAll }></Route>
         <Route path='/create' component={ Create }></Route>
+        <Route path='/ad' component={ Ad }></Route>
         <Route path='/audiobook' component={ Audiobook }></Route>
         {/* <Route path='/' component={  }></Route> */}
       </BrowserRouter>
