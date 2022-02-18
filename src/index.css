@@ -3,6 +3,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap);
 
 body {
+  position: relative;
   overflow-x: hidden;
   color: #333;
   margin: 0;
@@ -12,7 +13,27 @@ body {
 }
 
 html, body {
-  font-size: 62.5%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 499px) {
+  html, body {
+    font-size: 40%;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 799px) {
+  html, body {
+    font-size: 50%;
+  }
+  
+}
+
+@media screen and (min-width: 800px) {
+  html, body {
+    font-size: 62.5%;
+  }
 }
 
 a {
@@ -25,4 +46,5 @@ a {
   --point: #F2C46D;
   --point-sub: #b187c2;
   --content: #f0f0f0;
+  --navbar: #303032;
 }

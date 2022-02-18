@@ -23,7 +23,7 @@ function App() {
         <Route path='/audiobook' component={ Audiobook }></Route>
         {/* <Route path='/' component={  }></Route> */}
       </BrowserRouter>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </div>
   )
 }
