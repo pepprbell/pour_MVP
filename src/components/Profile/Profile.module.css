@@ -1,0 +1,145 @@
+.profile {
+    width: 100vw;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 31%, rgba(235,235,235,1) 100%);
+    text-align: left;
+    justify-items: center;
+    margin-top: 44px;
+    padding-top: 9rem;
+    padding-bottom: 7rem;
+    padding-left: max(30px, calc(50vw - 648px));
+}
+
+
+@media (min-width: 800px) {
+    .link {
+        filter: grayscale(1);
+    }
+    .desc h1 {
+        font-size: 3.6rem;
+    }
+    .desc p {
+        font-size: 1.6rem;
+    }
+    .sample {
+        font-size: 1.6rem;
+    }
+    .spacing {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 799px) {
+    .link {
+        filter: grayscale(0.2);
+    }
+    .desc h1 {
+        font-size: 30px;
+    }
+    .desc p {
+        font-size: 13px;
+    }
+    .sample {
+        font-size: 13px;
+    }
+    .spacing {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    
+}
+
+.left {
+    width: fit-content;
+    z-index: 2;
+}
+
+.desc h1 {
+    font-weight: bold;
+    margin: 0 0 20px;
+    padding-bottom: 4px;
+}
+
+.desc p {
+    margin-bottom: 2px;
+    font-weight: 500;
+}
+
+.profilePic {
+    position: absolute;
+    top: 110px;
+    right: 30px;
+    width: 30vw;
+    height: 40vw;
+    object-fit: cover;
+}
+
+.line {
+    width: 80px;
+    height: 8px;
+    background-color: var(--main);
+    margin: 24px 0;
+}
+
+.link {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    margin-right: 10px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: ease 0.15s;
+}
+
+.link:hover {
+    filter: grayscale(0.2);
+}
+
+.border {
+    background-color: #fff;
+    border: 2px solid #999;
+}
+
+.sample {
+    font-weight: 500;
+    width: 100%;
+}
+
+.spacing {
+    letter-spacing: 3.5px;
+    margin: 40px 0 20px;
+}
+
+.sample audio {
+    border: 2px solid #777;
+    border-radius: 999px;
+    height: 45px;
+    margin-bottom: 15px;
+}
+
+.sample audio::-webkit-media-controls-panel {
+    background-color: var(--white);
+}
+
+.sample p:last-child {
+    text-align: right;
+    cursor: pointer;
+}
+
+.pic {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    right: -200px;
+    transform: scaleX(-1);
+    /* filter: grayscale(0.3); */
+}
+
+.sign {
+    /* visibility: hidden; */
+    position: absolute;
+    bottom: 0px;
+    right: 125px;
+}
