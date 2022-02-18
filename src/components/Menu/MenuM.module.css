@@ -16,7 +16,7 @@
     align-items: center;
     position: fixed;
     overflow: hidden;
-    background-color: var(--main);
+    background-color: var(--navbar);
     width: 100%;
     height: 44px;
     top: 0;
@@ -71,7 +71,7 @@
     width: 100%;
     height: 100%;
     margin: 0;
-    background-color: var(--main);
+    background-color: var(--navbar);
     transition: ease 0.2s;
     visibility: hidden;
     opacity: 0;
