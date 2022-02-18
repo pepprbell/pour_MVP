@@ -47,5 +47,11 @@
         ]
       }
     }
+  },
+  "analytics": {
+    "mvpfanpage": {
+      "service": "Pinpoint",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }

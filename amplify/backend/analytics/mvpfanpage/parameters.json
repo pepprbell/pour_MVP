@@ -1,0 +1,21 @@
+{
+    "appName": "mvpfanpage",
+    "roleName": "pinpointLambdaRole47515049",
+    "cloudformationPolicyName": "cloudformationPolicy47515049",
+    "cloudWatchPolicyName": "cloudWatchPolicy47515049",
+    "pinpointPolicyName": "pinpointPolicy47515049",
+    "authPolicyName": "pinpoint_amplify_47515049",
+    "unauthPolicyName": "pinpoint_amplify_47515049",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}
