@@ -2,15 +2,16 @@ import styles from './Footer.module.css'
 
 function Footer(props) {
     return (
-        <div className={styles.footer}>
-            <div className={styles.footerContent}>
-                <div className={styles.fCard}>
-                    {/* <p>for us.</p> */}
+        <div className={styles.container}>
+            <div className={styles.content}>
+                {/* <div className={styles.fCard}>
+                    <p>for us.</p>
                 </div>
                 <div className={styles.fCard}>
-                </div>
+                </div> */}
                 <div className={styles.fCard}>          
-                    <p className={styles.right}>Contact : pepprbell@gmail.com</p>
+                    <p>Contact</p>
+                    <p>pepprbell@gmail.com</p>
                 </div>
             </div>
         </div>

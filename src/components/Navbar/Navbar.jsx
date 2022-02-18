@@ -1,5 +1,6 @@
 import styles from './Navbar.module.css'
 import { useEffect, useState } from 'react'
+import classnames from 'classnames'
 import {
   Hamburger, MenuD
 } from '../index'
@@ -17,7 +18,7 @@ function Navbar(props) {
   }
 
   return (
-    <div className={styles.navbar}>
+    <div className={classnames(styles.navbar, (props.dark ? styles.dark : styles.white))}>
       <div className={styles.content}>
         {sub}
       </div>
