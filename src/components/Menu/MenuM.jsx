@@ -25,7 +25,7 @@ function MenuM(props) {
   }
 
   const goUp = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' })
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   const goTo = (path) => {

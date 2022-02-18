@@ -8,6 +8,11 @@
     }
 }
 
+#top {
+    position: absolute;
+    top: 0;
+}
+
 /* navbar */
 
 .navbar {
@@ -23,6 +28,7 @@
     z-index: 6;
     padding: 0 10px;
     box-sizing: border-box;
+    z-index: 4;
 }
 
 .goHome {
@@ -37,6 +43,7 @@
     padding: 2px;
     opacity: 0.95;
     transition: ease-in-out 0.3s;
+    z-index: 4;
 }
 
 /* search */

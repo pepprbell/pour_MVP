@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react'
 import styles from './index.module.css'
-// import audiobook from '../../assets/audiobook.png'
-// import audiobook from '../../assets/audiobook.png'
 import {
     Navbar, Cards, BookBanner
 } from '../../components'
@@ -19,16 +17,21 @@ function Audiobooks () {
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
-        getData()
+        // getData()
         setIsLoading(false)
     }, [])
+    DataStore.query(Audiobook, Predicates.All, {
+        sort: s => s.Date(SortDirection.DESCENDING)
+    }).then(res => {
+        setAudiobook(res)
+    })
 
     const getData = () => {
-        DataStore.query(Audiobook, Predicates.All, {
-            sort: s => s.Date(SortDirection.DESCENDING)
-        }).then(res => {
-            setAudiobook(res)
-        })
+        // DataStore.query(Audiobook, Predicates.All, {
+        //     sort: s => s.Date(SortDirection.DESCENDING)
+        // }).then(res => {
+        //     setAudiobook(res)
+        // })
     }
 
     const subKr = []

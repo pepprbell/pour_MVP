@@ -1,6 +1,5 @@
 import styles from './MenuD.module.css'
 import sml from '../../assets/sml.png'
-import { Link } from 'react-router-dom'
 
 
 function MenuD(props) {
@@ -9,7 +8,7 @@ function MenuD(props) {
     }
 
     const goTo = (id) => {
-      window.location.pathname = '/'+id
+      window.location.href = '/'+id
     }
 
     return (
