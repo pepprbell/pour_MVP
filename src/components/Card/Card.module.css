@@ -35,17 +35,17 @@ figure {
     font-size: 14px;
     font-weight: 500;
     margin: 0 0 10px 0;
-    line-height: 2rem;
-    max-height: 4rem;
+    line-height: 20px;
+    max-height: 40px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .second {
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 12px;
     margin-bottom: 0;
-    line-height: 1.8rem;
+    line-height: 18px;
 }
 
 /* ---------------home--------------- */
