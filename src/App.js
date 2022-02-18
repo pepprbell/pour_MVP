@@ -17,8 +17,8 @@ function App() {
         <MenuD></MenuD>
         <MenuM></MenuM>
         <Route exact path='/' component={ Home }></Route>
-        <Route path='/seeall' component={ SeeAll }></Route>
-        <Route path='/create' component={ Create }></Route>
+        {/* <Route path='/seeall' component={ SeeAll }></Route> */}
+        {/* <Route path='/create' component={ Create }></Route> */}
         <Route path='/ad' component={ Ad }></Route>
         <Route path='/audiobook' component={ Audiobook }></Route>
         {/* <Route path='/' component={  }></Route> */}

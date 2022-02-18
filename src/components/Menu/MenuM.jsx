@@ -21,7 +21,7 @@ function MenuM(props) {
   }
 
   const goHome = () => {
-    window.location.pathname = '/'
+    window.location.href = '/'
   }
 
   const goUp = () => {
@@ -29,7 +29,7 @@ function MenuM(props) {
   }
 
   const goTo = (path) => {
-    window.location.pathname = '/'+path
+    window.location.href = '/'+path
   }
 
   return (
