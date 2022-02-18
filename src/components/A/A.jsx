@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import styles from './A.module.css'
 
 function A(props) {
-    const [type,setType] = useState()
     const [style,setStyle] = useState(styles.mobile)
 
     useEffect(() => {

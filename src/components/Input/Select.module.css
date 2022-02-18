@@ -1,4 +1,4 @@
-select {
+.select {
     border: 2px solid #ccc;
     border-radius: 10px;
     background-color: #00000000;
@@ -11,11 +11,11 @@ select {
     font-weight: normal;
 }
 
-select:focus {
+.select:focus {
     border: 2px solid var(--point-sub);
     outline:none;
 }
 
-select:disabled {
+.select:disabled {
     background-color: #ddd;
 }

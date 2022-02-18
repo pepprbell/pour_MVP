@@ -1,6 +1,5 @@
 import styles from './Card.module.css'
 import classnames from 'classnames';
-import { useState } from 'react'
 
 function Card(props) {
   const query = props.query

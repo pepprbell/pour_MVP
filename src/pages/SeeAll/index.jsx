@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import {
-    Navbar, Cards, MiniCards
+    Navbar,
 } from '../../components'
 import styles from './index.module.css'
 
@@ -68,37 +68,19 @@ function SeeAll(props) {
                 <div className={styles.category}>
                     <h1 className={styles.main}><a id='dubbing'></a>더빙</h1>
                     <h1 className={styles.sub}><a id='tv'></a>TV 애니메이션</h1>
-                    <Cards first='Character' second='Content' query={dubbing} type='tv'></Cards>
                     <h1 className={styles.sub}><a id='theater'></a>극장 애니메이션</h1>
-                    <Cards first='Character' second='Content' query={dubbing} type='theater'></Cards>
                     <h1 className={styles.sub}><a id='game'></a>게임</h1>
-                    <Cards first='Character' second='Content' query={dubbing} type='game'></Cards>
                     <h1 className={styles.sub}><a id='dramacd'></a>드라마 CD</h1>
-                    <Cards first='Character' second='Content' query={dubbing} type='dramacd'></Cards>
                     <h1 className={styles.sub}><a id='audiodrama'></a>오디오드라마</h1>
-                    <Cards first='Character' second='Content' query={dubbing} type='audiodrama'></Cards>
                     <h1 className={styles.sub}><a id='kamen'></a>특촬</h1>
-                    <Cards first='Character' second='Content' query={dubbing} type='kamen'></Cards>
-                </div>
-                <div className={styles.line}></div>
-                <div className={styles.category}>
-                    <h1 className={styles.main}><a id='ad'></a>광고</h1>
-                    <Cards first='Ad' second='' query={ad} type=''></Cards>
                 </div>
                 <div className={styles.line}></div>
                 <div className={styles.category}>
                     <h1 className={styles.main}><a id='foreign'></a>외화</h1>
-                    <Cards first='Character' second='Content' third='Actor' query={foreign} type=''></Cards>
-                </div>
-                <div className={styles.line}></div>
-                <div className={styles.category}>
-                    <h1 className={styles.main}><a id='audiobook'></a>오디오북</h1>
-                    <MiniCards first='Book' second='Author' query={audiobook}></MiniCards>
                 </div>
                 <div className={styles.line}></div>
                 <div className={styles.category}>
                     <h1 className={styles.main}><a id='short'></a>기타</h1>
-                    <MiniCards first='Character' second='Content' query={short}></MiniCards>
                 </div>
             </div>
         </div>

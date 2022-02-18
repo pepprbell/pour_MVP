@@ -11,7 +11,7 @@ function Select(props) {
     }
 
     return(
-        <select name={props.name} id={props.id} disabled={disabled} onChange={props.selectHandler}>
+        <select className={styles.select} name={props.name} id={props.id} disabled={disabled} onChange={props.selectHandler}>
             {options}
         </select>
     )

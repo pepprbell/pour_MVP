@@ -1,19 +1,14 @@
 import styles from './Profile.module.css'
-import cafe from '../../assets/cafe.png'
-import alv from '../../assets/allvoice.jpg'
-import insta from '../../assets/insta.png'
-import lov from '../../assets/lov.png'
-import prof from '../../assets/prof.png'
-import sign from '../../assets/signature.png'
 import classnames from 'classnames';
 
 function Profile(props) {
+  const alv = 'https://user-images.githubusercontent.com/67995526/154688191-2f498cc1-0465-4942-86f6-5711e0d3567c.jpg'
+  const insta = 'https://user-images.githubusercontent.com/67995526/154688260-45b70367-50e6-4428-97a2-4416cded9e4b.png'
+  const lov = 'https://user-images.githubusercontent.com/67995526/154688373-2f55d7eb-fb6e-4505-a5f3-056b2f7d05b7.png'
+  const cafe = 'https://user-images.githubusercontent.com/67995526/154688340-5e0975f4-84af-4e66-82ad-148d4c9db820.png'
+
   const movePage = (href) => {
     window.open(href, "_blank")
-  }
-
-  const goTo = () => {
-    window.location.pathname = '/seeall'
   }
 
   return (

@@ -1,9 +1,5 @@
 import styles from './Navbar.module.css'
-import { useEffect, useState } from 'react'
 import classnames from 'classnames'
-import {
-  Hamburger, MenuD
-} from '../index'
 
 function Navbar(props) {
   const goTo = (id) => {

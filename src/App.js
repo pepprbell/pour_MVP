@@ -1,14 +1,12 @@
 import { BrowserRouter } from 'react-router-dom';
-import styles from './App.module.css'
 import {
   Home, SeeAll, Create, Audiobook, Ad
 } from './pages'
 import {
-  MenuM, MenuD, Footer, Navbar
+  MenuM, MenuD, Footer,
 } from './components'
 import './App.css'
 import { Route } from 'react-router-dom';
-import { useState } from 'react';
 
 function App() {
   return (

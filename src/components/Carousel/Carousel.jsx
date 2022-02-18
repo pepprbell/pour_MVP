@@ -13,9 +13,6 @@ function Carousel(params) {
   const [interval, setInterval] = useState(null)
   const [youtubeOn, setYoutubeOn] = useState(false)
 
-  const imgUrl = 'http://i.ytimg.com/vi/'
-  const original = '/original.jpg'
-
   const adId = ['dyw2TA1YlxM','Chgi1gCyLko','MYbfOPIRtkc']
   const dubId = ['wNVuxwHylhc','YPsGch6p3Uw','E_UGkPagwZc']
   const adTime = [0,0,0]
