@@ -10,7 +10,7 @@
 .white {
     display: flex;
     text-align: left;
-    width: 100%;
+    width: 201px;
     height: fit-content;
     margin: 5px 0;
     box-sizing: border-box;
@@ -48,32 +48,6 @@ figure {
     line-height: 18px;
 }
 
-/* ---------------home--------------- */
-
-.homeCard {
-    max-width: 320px;
-    margin: 0;
-}
-
-.homeImg {
-    width: 320px;
-    height: 180px;
-}
-
-.homeH4 {
-    font-size: 20px;
-    margin: 8px 0;
-}
-
-.homeA {
-    font-size: 14px;
-}
-
-.homeWhite {
-    padding: 0 15px;
-    min-height: 90px;
-}
-
 /* --------------seeall-------------- */
 
 @media screen and (max-width: 549px) {    
@@ -87,9 +61,13 @@ figure {
         height: 45vw;
     }
     
-    .allWhite {
+    .white {
         padding: 5px 10px;
         min-height: 50px;
+    }
+
+    .text {
+        max-width: calc(45vw - 20px);
     }
     
 }
@@ -104,9 +82,13 @@ figure {
         height: 170px;
     }
     
-    .allWhite {
+    .white {
         padding: 5px 10px;
         min-height: 50px;
+    }
+
+    .text {
+        max-width: calc(170px - 20px);
     }
     
 }
@@ -120,7 +102,7 @@ figure {
         height: 201px;
     }
     
-    .allWhite {
+    .white {
         padding: 5px 10px;
         min-height: 70px;
     }

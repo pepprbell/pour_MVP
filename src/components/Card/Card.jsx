@@ -12,11 +12,11 @@ function Card(props) {
   return (
     <div className={classnames(styles.card, (props.type ? styles.homeCard : styles.allCard))} style={{visibility:props.visible}} onClick={movePage} key={query['id']} ref={props.refs}>
     <figure><img className={styles.img} src={props.query ? props.query.Image : none} alt="" /></figure>
-    <div className={classnames(styles.white, (props.type ? styles.homeWhite : styles.allWhite))}>
-      <div className={(props.type ? styles.homeDiv : styles.allDiv)}>
-        <h4 className={styles.first}>{query[props.first]}</h4>
-        <p className={styles.second} href={props.href}>{query[props.second]}</p>
-        <p className={styles.second}>{query[props.third]}</p>
+    <div className={styles.white}>
+      <div>
+        <h4 className={classnames(styles.first, styles.text)}>{query[props.first]}</h4>
+        <p className={classnames(styles.second, styles.text)} href={props.href}>{query[props.second]}</p>
+        <p className={classnames(styles.second, styles.text)}>{query[props.third]}</p>
       </div>
     </div>
   </div>
