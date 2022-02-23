@@ -4,25 +4,41 @@ import YouTube from 'react-youtube'
 import { useRef, useState } from 'react'
 
 function VidCard (props) {
-  const none = "https://user-images.githubusercontent.com/67995526/154494368-d2a4d6e1-dd45-42b0-8d0e-22e6719bc2d0.png"
+  const playButton = 'https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/play-icon-18-256.png'
+  const [youtubeOn, setYoutubeOn] = useState(false)
+  const query = props.query
+  const videoId = query['Link'].split('/')[3]
+  const date = query['Date'].split('-')[0] + '. ' + query['Date'].split('-')[1] + '.'
+  const img = 'https://i.ytimg.com/vi/' + videoId + '/original.jpg'
+
   const opts = {
     playerVars: {
       rel: 0,
       listType: 'playlist',
     }
   }
-  const vid0 = useRef(null)
-  const videoId = "dyw2TA1YlxM"
+
+  const vidRef = useRef()
+  const handleClick = () => {
+    setYoutubeOn(true)
+    vidRef.current.internalPlayer.playVideo()
+    props.isPlaying(vidRef)
+  }
 
   return(
-      <div className={classnames(styles.card, (props.type ? styles.homeCard : styles.allCard))} style={{visibility:props.visible}}>
-        {/* <div><YouTube videoId={videoId} className={styles.img} opts={opts} ref={vid0}></YouTube></div> */}
-        <div><img src={none} className={styles.img} alt="" /></div>
+      <div className={classnames(styles.card, (props.type ? styles.homeCard : styles.allCard))} style={{visibility:props.visible}} ref={props.refs} onClick={props.onclick}>
+        <div className={styles.content}>
+          <YouTube videoId={videoId} className={classnames(styles.img, (youtubeOn ? styles.on : styles.off))} opts={opts} ref={vidRef}></YouTube>
+          <div onClick={handleClick} className={(youtubeOn ? styles.off : styles.on)}>
+            <img src={img} className={classnames(styles.cover, styles.img)} alt=""/>
+            <img src={playButton} className={styles.playButton} alt=""/>
+          </div>
+        </div>
       <div className={styles.white}>
         <div>
-          <h4 className={styles.first}>{props.first}광고이름</h4>
-          <p className={styles.second}>{props.second}2022</p>
-          <p className={styles.second}>{props.third}</p>
+          <h4 className={styles.first}>{query[props.first]}</h4>
+          <p className={styles.second}>{date}</p>
+          {/* <p className={styles.second}>{props.third}</p> */}
         </div>
       </div>
     </div>
