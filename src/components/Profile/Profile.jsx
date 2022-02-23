@@ -2,6 +2,7 @@ import styles from './Profile.module.css'
 import classnames from 'classnames';
 
 function Profile(props) {
+  const prof = 'https://user-images.githubusercontent.com/67995526/155153214-d3951a47-c8b0-4647-a923-92dbef43a26a.png'
   const alv = 'https://user-images.githubusercontent.com/67995526/154688191-2f498cc1-0465-4942-86f6-5711e0d3567c.jpg'
   const insta = 'https://user-images.githubusercontent.com/67995526/154688260-45b70367-50e6-4428-97a2-4416cded9e4b.png'
   const lov = 'https://user-images.githubusercontent.com/67995526/154688373-2f55d7eb-fb6e-4505-a5f3-056b2f7d05b7.png'
@@ -15,10 +16,10 @@ function Profile(props) {
     <div className={styles.profile}>
       <div className={styles.left}>
         <div className={styles.desc}>
+          {/* <img className={styles.profilePic} src={prof} alt="" /> */}
           <h1>민승우</h1>
           <p>대교방송 성우극회 6기</p>
           <p>1986. 11. 3.</p>
-          {/* <img className={styles.profilePic} src={prof} alt="" /> */}
           <div className={styles.line}></div>
           <div>
             <img className={classnames(styles.link, styles.border)} src={lov} alt="" onClick={() => {movePage("https://lordofvoice.com/seungwoo")}}/>
