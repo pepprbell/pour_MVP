@@ -1,3 +1,10 @@
+type Ad @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Link: AWSURL
+  Ad: String!
+  Date: AWSDate
+}
+
 type Audiobook @model @auth(rules: [{allow: public}]) {
   id: ID!
   Author: String!
@@ -6,3 +13,4 @@ type Audiobook @model @auth(rules: [{allow: public}]) {
   Link: AWSURL
   Date: AWSDate
 }
+ 
