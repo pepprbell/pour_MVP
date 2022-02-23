@@ -3,46 +3,61 @@ import classnames from 'classnames'
 import { useEffect, useState } from 'react'
 
 import {
-    VidCard
+    VidCard, Card
 } from '../../components'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight, faChevronLeft, faMaximize } from '@fortawesome/free-solid-svg-icons'
 
-export default function CardCarousel() {
+export default function CardCarousel(props) {
   const [current, setCurrent] = useState(0)
   const [last, setLast] = useState(0)
-
+  const query = props.query
+  const [gap, setGap] = useState(436)
+ 
   const getLast = () => {
-    if (window.innerWidth >= 1318) {
-      setLast(-436 * 1)
-      return
+    const times = query.length - parseInt((window.innerWidth-Math.max(0.0015 * window.innerWidth, 0.5 * window.innerWidth - 658))/gap)
+    if (times <= 0) {
+      setLast(props.last)
+    } else {
+      setLast(-gap * times)
     }
-    if (window.innerWidth >= 870) {
-      setLast(-436 * 2)
-      return
-    }
-    if (window.innerWidth < 436) {
-      setLast(-436 * 3)
-    }
+    console.log(times)
   }
 
-  useEffect(() => {
-    getLast()
-  }, [])
+  const goTo = () => {
+    window.location.pathname = '/'+ props.redirectTo
+  }
 
   const left = () => {
-    setCurrent(current+436)
+    setTimeout(setCurrent(current+gap), 150)
   }
 
   const right = () => {
-    setCurrent(current-436)
+    setTimeout(setCurrent(current-gap), 150)
+    console.log(current)
+  }
+
+  useEffect(() => {
+    if (props.mode) {
+      setGap(221)
+    }
+    getLast()
+  }, [])
+  
+  
+  const [prev, setPrev] = useState('')
+  const stopAndRun = (data) => {
+    if (prev) {
+      prev.current.internalPlayer.pauseVideo()
+    }
+    setPrev(data)
   }
 
   return(
     <div className={styles.hash}>
       <div className={styles.center}>
-        <h1 className={styles.main}><a id='hashtag1' href=''></a>#Hashtag&nbsp;&nbsp; #hash</h1>
+        <h1 className={styles.main}><a id={props.id} href=''></a>{props.title}</h1>
         <div className={styles.buttons}>
           <button onClick={left} disabled={current === 0 ? true : false}><FontAwesomeIcon icon={faChevronLeft}/></button>
           <button onClick={right} disabled={current === last ? true : false}><FontAwesomeIcon icon={faChevronRight}/></button>
@@ -50,20 +65,24 @@ export default function CardCarousel() {
       </div>
       <div className={styles.carContainer}>
       <ul className={classnames(styles.items)} role="list">
-        <li className={classnames(styles.item)} style={{transform: "translate("+current+"px,0)"}}>
-          <VidCard></VidCard>
-        </li>
-        <li className={classnames(styles.item)} style={{transform: "translate("+(current+436)+"px,0)"}}>
-          <VidCard></VidCard>
-        </li>
-        <li className={classnames(styles.item)} style={{transform: "translate("+(current+872)+"px,0)"}}>
-          <VidCard></VidCard>
-        </li>
-        <li className={classnames(styles.item)} style={{transform: "translate("+(current+1308)+"px,0)"}}>
-          <VidCard></VidCard>
-        </li>
+        {query.map((item, index) => {
+          if (props.mode) {
+            return (
+              <li className={classnames(styles.item)} style={{transform: "translate("+(current+index*gap)+"px,0)", padding: "0 2.5px"}}>
+                <Card query={item} first='Book' second='Author' third='Date'></Card>
+              </li>
+            )
+          } else {
+            return (
+              <li className={classnames(styles.item)} style={{transform: "translate("+(current+index*gap)+"px,0)", padding: "0 10px"}}>
+                <VidCard query={item} first='Ad' second='Date' isPlaying={stopAndRun}></VidCard>
+              </li>
+            )
+          }
+        })}
       </ul>
     </div>
+    <div className={classnames(styles.center, styles.pDiv)}><p className={styles.redirect} onClick={goTo}>{props.redirectText}</p></div>
     </div>
   )
 }
