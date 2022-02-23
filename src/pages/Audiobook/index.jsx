@@ -13,7 +13,7 @@ function Audiobooks () {
         hasMore,
         loading,
         error
-    } = GetAudiobook(pageNumber)
+    } = GetAudiobook(30, pageNumber)
 
     const observer = useRef()
     const lastBookElementRef = useCallback(node => {
@@ -27,22 +27,15 @@ function Audiobooks () {
         if (node) observer.current.observe(node)
     }, [loading, hasMore])
 
-    function handleData(e) {
-        setPageNumber(0)
-    }
-
-    
-    const goOut = (url) => {
-        window.open(url, "_blank")
-    }
-
-
     return (
         <div className={styles.container}>
             {/* <Navbar subKr={subKr} subEn={subEn}></Navbar> */}
+            <div className={styles.banner}>
+                <div className={styles.content}>
+                    <BookBanner></BookBanner>
+                </div>
+            </div>
             <div className={styles.content}>
-                <BookBanner></BookBanner>
-                    {/* <button onClick={handleData}></button> */}
                 <div className={styles.cards}>
                     {books.map((book,index) => {
                         if (books.length === index+1) {
@@ -51,10 +44,9 @@ function Audiobooks () {
                             return <Card query={book} first='Book' second='Author' third='Date'></Card>
                         }
                     })}
-                    <div>{loading && 'Loading...'}</div>
-                    <div>{error && 'Error'}</div>
-                    {/* <Cards first='Book' second='Author' third='Date' query={audiobook}></Cards> */}
                 </div>
+                <div>{loading && 'Loading...'}</div>
+                <div>{error && 'Error'}</div>
             </div>
         </div>
     )
