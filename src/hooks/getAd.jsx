@@ -1,28 +1,28 @@
 import { useEffect, useState } from "react"
 import { DataStore, Predicates, SortDirection } from '@aws-amplify/datastore'
-import { Audiobook } from '../models'
+import { Ad } from '../models'
 
-export default function GetAudiobook (howMuch, pageNumber) {
+export default function GetAd (howMuch, pageNumber) {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(false)
-    const [books, setBooks] = useState([])
+    const [ads, setAds] = useState([])
     const [hasMore, setHasMore] = useState(false)
 
     useEffect(() => {
-        setBooks([])
+        setAds([])
     }, [])
 
     useEffect(() => {
         setLoading(true)
         setError(false)
 
-        DataStore.query(Audiobook, Predicates.All, {
+        DataStore.query(Ad, Predicates.All, {
             sort: s => s.Date(SortDirection.DESCENDING),
             page: pageNumber,
             limit: howMuch
         }).then(res => {
-            setBooks(prevBooks => {
-                return [...new Set([...prevBooks, ...res.map(b => b)])]
+            setAds(prevAds => {
+                return [...new Set([...prevAds, ...res.map(b => b)])]
             })
             setHasMore(res.length > 0)
             setLoading(false)
@@ -31,5 +31,5 @@ export default function GetAudiobook (howMuch, pageNumber) {
         })
     }, [pageNumber])
 
-    return { loading, error, books, hasMore }
+    return { loading, error, ads, hasMore }
 }
