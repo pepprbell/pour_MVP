@@ -4,9 +4,10 @@ import { schema } from './schema';
 
 
 
-const { Ad, Audiobook } = initSchema(schema);
+const { Dubbing, Ad, Audiobook } = initSchema(schema);
 
 export {
+  Dubbing,
   Ad,
   Audiobook
 };
