@@ -3,7 +3,7 @@ import classnames from 'classnames'
 
 function Navbar(props) {
   const goTo = (id) => {
-    window.location.href = '#' + id
+    window.location.href = '/' + id
   }
 
   const sub = []

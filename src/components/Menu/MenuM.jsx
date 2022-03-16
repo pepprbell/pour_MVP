@@ -46,7 +46,7 @@ function MenuM(props) {
       </div>
         <ul>
           <li onClick={() => {goTo("")}}>홈</li>
-          {/* <li onClick={() => {goTo("seeall")}}>더빙</li> */}
+          <li onClick={() => {goTo("dubbing")}}>더빙</li>
           <li onClick={() => {goTo("ad")}}>광고</li>
           {/* <li onClick={() => {goTo("")}}>외화</li> */}
           <li onClick={() => {goTo("audiobook")}}>오디오북</li>
