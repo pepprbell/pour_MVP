@@ -1,12 +1,11 @@
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import {
-  Home, SeeAll, Create, Audiobook, Ad, Dubbing
+  Home, SeeAll, Create, Audiobook, Ad, Dubbing, Login
 } from './pages'
 import {
   MenuM, MenuD, Footer,
 } from './components'
 import './App.css'
-import { Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -15,6 +14,7 @@ function App() {
         <MenuD></MenuD>
         <MenuM></MenuM>
         <Route exact path='/' component={ Home }></Route>
+        <Route path='/login' component={ Login }></Route>
         <Route path='/seeall' component={ SeeAll }></Route>
         <Route path='/create' component={ Create }></Route>
         <Route path='/ad' component={ Ad }></Route>
