@@ -1,3 +1,12 @@
+type Dubbing @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Character: String!
+  Content: String!
+  Image: AWSURL
+  Link: AWSURL
+  Type: String!
+}
+
 type Ad @model @auth(rules: [{allow: public}]) {
   id: ID!
   Link: AWSURL
