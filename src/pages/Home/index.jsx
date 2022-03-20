@@ -16,8 +16,8 @@ function Home(props) {
     return (
         <div className={styles.container}>
           <Profile></Profile>
-          <div className={styles.gap}></div>
-          <CardCarousel query={ads} title="광고" redirectTo="ad" redirectText="+ 광고 더보기" last={3}></CardCarousel>
+          {/* <div className={styles.gap}></div> */}
+          {/* <CardCarousel query={ads} title="광고" redirectTo="ad" redirectText="+ 광고 더보기" last={3}></CardCarousel> */}
           {/* <CardCarousel query={books} title="오디오북" redirectTo="audiobook" redirectText="+ 오디오북 더보기" last={3} mode="card"></CardCarousel> */}
         </div>
     )
