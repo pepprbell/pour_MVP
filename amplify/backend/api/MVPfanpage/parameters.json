@@ -2,5 +2,5 @@
   "AppSyncApiName": "MVPfanpage",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
   "DynamoDBEnableServerSideEncryption": false,
-  "AuthModeLastUpdated": "2022-02-22T15:26:53.805Z"
+  "AuthModeLastUpdated": "2022-03-20T15:13:49.053Z"
 }
