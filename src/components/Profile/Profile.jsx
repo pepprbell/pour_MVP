@@ -39,11 +39,11 @@ function Profile(props) {
         <div className={styles.sample}>
           <p className={styles.spacing}>SAMPLE</p>
           <p>제네시스 G70 CF (2019)</p>
-          <audio id="voice1" controls src={v1} className={styles.audio}></audio>
+          <audio id="voice1" controls className={styles.audio}><source src={v1} type="audio/mpeg"/></audio>
           <p>자색고구마맛 쿠키 - 쿠키런: 킹덤</p>
-          <audio id="voice2" controls src={v2} className={styles.audio}></audio>
+          <audio id="voice1" controls className={styles.audio}><source src={v2} type="audio/mpeg"/></audio>
           <p>에마 - Library of Ruina</p>
-          <audio id="voice3" controls src={v3} className={styles.audio}></audio>
+          <audio id="voice1" controls className={styles.audio}><source src={v3} type="audio/mpeg"/></audio>
           {/* <p onClick={goTo}>+ 출연작 더보기</p> */}
         </div>
       </div>
