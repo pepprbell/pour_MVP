@@ -12,7 +12,6 @@ import { Amplify } from '@aws-amplify/core'
 import { useHistory } from 'react-router-dom'
 Amplify.configure(awsConfig)
 
-
 function SeeAll(props) {
     const history = useHistory()
     const move = () => {

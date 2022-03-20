@@ -1,8 +1,8 @@
 import styles from './Profile.module.css'
 import classnames from 'classnames';
-import v1 from '../../assets/제네시스.mp3'
-import v2 from '../../assets/자구마.mp3'
-import v3 from '../../assets/에마.mp3'
+import GetSample from '../../hooks/getSample'
+import { Storage } from '@aws-amplify/storage'
+import { useEffect, useRef, useState } from 'react';
 
 function Profile(props) {
   const profM = 'https://user-images.githubusercontent.com/67995526/159160943-50cfa8a8-0fa9-4a29-a248-56e7c6720941.png'
@@ -11,11 +11,35 @@ function Profile(props) {
   const insta = 'https://user-images.githubusercontent.com/67995526/154688260-45b70367-50e6-4428-97a2-4416cded9e4b.png'
   const lov = 'https://user-images.githubusercontent.com/67995526/154688373-2f55d7eb-fb6e-4505-a5f3-056b2f7d05b7.png'
   const cafe = 'https://user-images.githubusercontent.com/67995526/154688340-5e0975f4-84af-4e66-82ad-148d4c9db820.png'
+  const [v1, setV1] = useState('')
+  const [v2, setV2] = useState('')
+  const [v3, setV3] = useState('')
+  const ref1 = useRef()
+  const ref2 = useRef()
+  const ref3 = useRef()
 
   const movePage = (href) => {
     window.open(href, "_blank")
   }
-
+  useEffect(() => {
+    Storage.get("voice/제네시스.wav", {
+      level: "public"
+    }).then(res => {
+      setV1(res)
+    })
+    Storage.get("voice/자구마.wav", {
+      level: "public"
+    }).then(res => {
+      setV2(res)
+    })
+    Storage.get("voice/에마.wav", {
+      level: "public"
+    }).then(res => {
+      setV3(res)
+    })
+    ref1.current.volume = 0.9
+  })
+  
   return (
     <div className={styles.profile}>
       <div className={styles.left}>
@@ -39,11 +63,11 @@ function Profile(props) {
         <div className={styles.sample}>
           <p className={styles.spacing}>SAMPLE</p>
           <p>제네시스 G70 CF (2019)</p>
-          <audio id="voice1" controls className={styles.audio}><source src={v1} type="audio/mpeg"/></audio>
+          <audio id="voice1" src={v1} ref={ref1} controls className={styles.audio}></audio>
           <p>자색고구마맛 쿠키 - 쿠키런: 킹덤</p>
-          <audio id="voice1" controls className={styles.audio}><source src={v2} type="audio/mpeg"/></audio>
+          <audio id="voice1" src={v2} ref={ref2} controls className={styles.audio}></audio>
           <p>에마 - Library of Ruina</p>
-          <audio id="voice1" controls className={styles.audio}><source src={v3} type="audio/mpeg"/></audio>
+          <audio id="voice1" src={v3} ref={ref3} controls className={styles.audio}></audio>
           {/* <p onClick={goTo}>+ 출연작 더보기</p> */}
         </div>
       </div>
