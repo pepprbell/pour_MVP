@@ -4,7 +4,7 @@ function Select(props) {
     const options = []
     let disabled = false
     for (let i = 0; i < props.option.length; i++) {
-        options.push(<option value={props.value[i]}>{props.option[i]}</option>)
+        options.push(<option value={props.value[i]} key={i}>{props.option[i]}</option>)
     }
     if (props.option.length === 1) {
         disabled = true
