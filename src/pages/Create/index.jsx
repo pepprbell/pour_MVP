@@ -54,10 +54,6 @@ function Create() {
     handleType('dubbing')
   }, [])
 
-  const handleInput = (e) => {
-    console.log(e.target)
-  }
-
   const forms = (selected) => {
     setForm([])
     for (let i = 0; i < selected.length; i++) {
@@ -75,7 +71,7 @@ function Create() {
         [input3.current.name]: input3.current.value,
         'Type': 'game'
       }
-      DataStore.save(new Dubbing(saveForm))
+      DataStore.save(new Dubbing(saveForm)).catch(err => console.log(err))
     }
     if (genre === 'ad') {
       const saveForm = {
@@ -83,7 +79,7 @@ function Create() {
         [input2.current.name]: input2.current.value,
         [input3.current.name]: input3.current.value,
       }
-      DataStore.save(new Ad(saveForm))
+      DataStore.save(new Ad(saveForm)).catch(err => console.log(err))
     }
     if (genre === 'audiobook') {
       const saveForm = {
@@ -93,26 +89,13 @@ function Create() {
         [input4.current.name]: input4.current.value,
         [input5.current.name]: input5.current.value,
       }
-      DataStore.save(new Audiobook(saveForm))
+      DataStore.save(new Audiobook(saveForm)).catch(err => console.log(err))
     }
-    setTimeout(window.location.reload(), 500)
   }
 
   return (
     <div className={styles.bg}>
       <div className={styles.rear}>
-        {/* <div className={styles.tab}>
-          <input id="dubbing" type="radio" name="type"/>
-          <label className={styles.tab_item} for="dubbing" onClick={() => {handleType('dubbing')}}>더빙</label>
-          <input id="ad" type="radio" name="type"/>
-          <label className={styles.tab_item} for="ad" onClick={() => {handleType('ad')}}>광고</label>
-          <input id="foreign" type="radio" name="type"/>
-          <label className={styles.tab_item} for="foreign" onClick={() => {handleType('foreign')}}>외화</label>
-          <input id="audiobook" type="radio" name="type"/>
-          <label className={styles.tab_item} for="audiobook" onClick={() => {handleType('audiobook')}}>오디오북</label>
-          <input id="short" type="radio" name="type"/>
-          <label className={styles.tab_item} for="short" onClick={() => {handleType('short')}}>단역</label>
-        </div> */}
         <div className={styles.form}>
           <p>작품 유형<span> *</span></p>
           <Select option={option} value={optionEn} selectHandler={e => handleType(e.target.value)}></Select>
