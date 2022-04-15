@@ -15,3 +15,7 @@ body > div::-webkit-scrollbar-track {
 body p {
     cursor: default;
 }
+
+body > iframe {
+    display: none;
+}

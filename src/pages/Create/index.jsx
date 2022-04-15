@@ -58,7 +58,7 @@ function Create() {
     setForm([])
     for (let i = 0; i < selected.length; i++) {
       setForm(prevForm => [...prevForm, <p key={i}>{selected[i][0]}<span> *</span></p>])
-      setForm(prevForm => [...prevForm, <input className={styles.input} key={'s'+i} type={selected[i][2]} placeholder={selected[i][0]} name={selected[i][1]} onChange={e => handleInput(e)} ref={selected[i][3]}></input>])
+      setForm(prevForm => [...prevForm, <input className={styles.input} key={'s'+i} type={selected[i][2]} placeholder={selected[i][0]} name={selected[i][1]} ref={selected[i][3]}></input>])
     }
   }
 
@@ -71,7 +71,7 @@ function Create() {
         [input3.current.name]: input3.current.value,
         'Type': 'game'
       }
-      DataStore.save(new Dubbing(saveForm)).catch(err => console.log(err))
+      DataStore.save(new Dubbing(saveForm)).catch(err => {console.log(err);alert('양식에 맞지 않습니다!')})
     }
     if (genre === 'ad') {
       const saveForm = {
@@ -79,7 +79,7 @@ function Create() {
         [input2.current.name]: input2.current.value,
         [input3.current.name]: input3.current.value,
       }
-      DataStore.save(new Ad(saveForm)).catch(err => console.log(err))
+      DataStore.save(new Ad(saveForm)).catch(err => {console.log(err);alert('양식에 맞지 않습니다!')})
     }
     if (genre === 'audiobook') {
       const saveForm = {
@@ -89,7 +89,7 @@ function Create() {
         [input4.current.name]: input4.current.value,
         [input5.current.name]: input5.current.value,
       }
-      DataStore.save(new Audiobook(saveForm)).catch(err => console.log(err))
+      DataStore.save(new Audiobook(saveForm)).catch(err => {console.log(err);alert('양식에 맞지 않습니다!')})
     }
   }
 
