@@ -16,6 +16,7 @@
     "aws-amplify": "^4.3.12",
     "cookie": "^0.4.1",
     "graphql": "^16.2.0",
+    "html-react-parser": "^1.4.10",
     "react": "^17.0.2",
     "react-bootstrap": "^2.1.1",
     "react-dom": "^17.0.2",
@@ -30,6 +31,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "resolutions": {
+    "react-error-overlay": "6.0.9"
   },
   "eslintConfig": {
     "extends": [
