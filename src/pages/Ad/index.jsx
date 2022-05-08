@@ -39,7 +39,6 @@ function Ads () {
 
   return(
     <div className={styles.container}>
-      <Navbar subKr={subKr} subEn={subEn} dark='dark'></Navbar>
       <div className={styles.banner}>
         <Carousel></Carousel>
       </div>

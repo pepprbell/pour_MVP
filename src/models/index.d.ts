@@ -21,7 +21,6 @@ export declare class Dubbing {
   readonly Character: string;
   readonly Content: string;
   readonly Image?: string;
-  readonly Link?: string;
   readonly Type: string;
   readonly createdAt?: string;
   readonly updatedAt?: string;

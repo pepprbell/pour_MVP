@@ -31,13 +31,6 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "Link": {
-                    "name": "Link",
-                    "isArray": false,
-                    "type": "AWSURL",
-                    "isRequired": false,
-                    "attributes": []
-                },
                 "Type": {
                     "name": "Type",
                     "isArray": false,
@@ -250,5 +243,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "ec04715f2505be56610c2c6d53131dc4"
+    "version": "4c3ffb975840076201be854e04954bb8"
 };

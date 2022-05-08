@@ -23,5 +23,11 @@ export type AmplifyDependentResourcesAttributes = {
             "Id": "string",
             "appName": "string"
         }
+    },
+    "storage": {
+        "s3mvpfanpage": {
+            "BucketName": "string",
+            "Region": "string"
+        }
     }
 }

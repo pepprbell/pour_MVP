@@ -7,8 +7,8 @@ import GetGame from '../../hooks/getGame'
 
 function Dubbings () {
   const [pageNumber, setPageNumber] = useState(0)
-  const subKr = ['TV 애니메이션', '극장 애니메이션', '게임', '드라마CD']
-  const subEn = []
+  const subKr = ['게임']
+  const subEn = ['game']
 
   const {
     games,

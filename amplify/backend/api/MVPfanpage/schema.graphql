@@ -3,7 +3,10 @@ type Dubbing @model @auth(rules: [{allow: public}]) {
   Character: String!
   Content: String!
   Image: AWSURL
+<<<<<<< HEAD
   Link: AWSURL
+=======
+>>>>>>> 50499aee944ba079b97bca64d0391651bfa82bda
   Type: String!
 }
 

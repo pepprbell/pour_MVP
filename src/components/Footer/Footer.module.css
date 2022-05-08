@@ -1,15 +1,13 @@
 .container {
     width: 100%;
     height: fit-content;
-    /* background-color: #f0f0f2; */
     line-height: 1;
     margin: 0 auto;
-    margin-top: 10px;
     display: flex;
 }
 
 .content {
-    padding: 2rem 5rem 4rem;
+    padding: 2rem 5rem 2rem;
     width: 100%;
     display: flex;
     flex-wrap: wrap;

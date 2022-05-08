@@ -58,11 +58,16 @@
 
 .content {
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     width: 1296px;
     height: 100%;
     line-height: 44px;
     color: var(--white);
+}
+
+.nav {
+    display: flex;
+    justify-content: left;
 }
 
 .content p {
