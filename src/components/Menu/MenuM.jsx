@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import styles from './MenuM.module.css'
 import classnames from 'classnames';
 import sml from '../../assets/sml.png'
@@ -10,6 +10,7 @@ import {
 
 function MenuM(props) {
   const [menuOn, setMenuOn] = useState(0)
+  // const dubbing = useRef()
 
   // 메뉴 클릭
   const openMenu = () => {
@@ -32,6 +33,14 @@ function MenuM(props) {
     window.location.href = '/'+path
   }
 
+  // const toggle = (e) => {
+  //   if (dubbing.current.className === styles.none) {
+  //     dubbing.current.className = styles.display
+  //   } else {
+  //     goTo('dubbing')
+  //   }
+  // }
+
   return (
     <div className={styles.container}>
     <div className={styles.navbar}>
@@ -48,7 +57,6 @@ function MenuM(props) {
           <li onClick={() => {goTo("")}}>홈</li>
           <li onClick={() => {goTo("dubbing")}}>더빙</li>
           <li onClick={() => {goTo("ad")}}>광고</li>
-          {/* <li onClick={() => {goTo("")}}>외화</li> */}
           <li onClick={() => {goTo("audiobook")}}>오디오북</li>
         </ul>
       </div>
