@@ -1,11 +1,10 @@
 import styles from './MenuD.module.css'
 import sml from '../../assets/sml.png'
-import { Button } from '../'
 
 
 function MenuD(props) {
     const goHome = () => {
-        window.location.href = '/'
+      window.location.href = '/'
     }
 
     const goTo = (id) => {
@@ -18,7 +17,7 @@ function MenuD(props) {
           <div className={styles.content}>
             <div className={styles.nav}>
               <img className={styles.goHome} src={sml} alt="" onClick={goHome} />
-              {/* <p onClick={() => {goTo('seeall')}}>더빙</p> */}
+              <p onClick={() => {goTo('dubbing')}}>더빙</p>
               <p onClick={() => {goTo('ad')}}>광고</p>
               {/* <p onClick={() => {goTo('foreign')}}>외화</p> */}
               <p onClick={() => {goTo('audiobook')}}>오디오북</p>

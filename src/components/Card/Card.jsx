@@ -7,9 +7,7 @@ function Card(props) {
 
   const movePage = (id) => {
     if (query.Link) {
-      // window.open(props.query.Link, "_blank")
-    } else {
-      console.log('none')
+      window.open(props.query.Link, "_blank")
     }
   }
   

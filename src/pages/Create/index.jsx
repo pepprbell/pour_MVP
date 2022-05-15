@@ -36,7 +36,6 @@ function Create() {
   const ad = [['광고 이름','Ad','',input1],['광고 영상 링크','Link','',input2],['날짜','Date','date',input3]]
   const audiobook = [['책 이름','Book','',input1],['작가','Author','',input2],['이미지 링크', 'Image', '',input3],['오디오북 링크', 'Link', '',input4],['날짜','Date','date',input5]]
 
-
   const handleType = (type) => {
     setGenre(type)
     if (type==="dubbing") {

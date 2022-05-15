@@ -4,11 +4,9 @@ import {
     Profile, CardCarousel
 } from '../../components'
 import GetAd from '../../hooks/getAd'
-import GetAudiobook from '../../hooks/getAudiobook'
 
 function Home(props) {
     const { ads, hasMore, loading, error } = GetAd(6, 0)  
-    const { books, hasMoreb, loadingb, errorb } = GetAudiobook(9, 0)
   
     useEffect(() => {
     }, [])

@@ -39,9 +39,9 @@ function Audiobooks () {
                 <div className={styles.cards}>
                     {books.map((book,index) => {
                         if (books.length === index+1) {
-                            return <Card refs={lastBookElementRef} query={book} first='Book' second='Author' third='Date'></Card>
+                            return <Card refs={lastBookElementRef} key={index} query={book} first='Book' second='Author' third='Date'></Card>
                         } else {
-                            return <Card query={book} first='Book' second='Author' third='Date'></Card>
+                            return <Card query={book} key={index} first='Book' second='Author' third='Date'></Card>
                         }
                     })}
                 </div>

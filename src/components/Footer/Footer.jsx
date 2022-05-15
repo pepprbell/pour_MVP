@@ -10,8 +10,7 @@ function Footer(props) {
                 <div className={styles.fCard}>
                 </div> */}
                 <div className={styles.fCard}>          
-                    <p>Contact</p>
-                    <p>pepprbell@gmail.com</p>
+                    <p>Contact: pepprbell@gmail.com</p>
                 </div>
             </div>
         </div>

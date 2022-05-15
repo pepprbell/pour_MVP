@@ -3,11 +3,16 @@
   "serviceConfiguration": {
     "apiName": "MVPfanpage",
     "serviceName": "AppSync",
+<<<<<<< HEAD
+    "gqlSchemaPath": "C:\\Users\\bellpeppr\\Desktop\\folio\\amplify\\backend\\api\\MVPfanpage\\schema.graphql",
+=======
     "gqlSchemaPath": "/tmp/amplify-d143cca0-17c5-4c48-a312-7033604f88ef/amplify/backend/api/MVPfanpage/schema.graphql",
+>>>>>>> 50499aee944ba079b97bca64d0391651bfa82bda
     "defaultAuthType": {
       "mode": "API_KEY",
-      "keyDescription": "api key description",
-      "expirationTime": 30
+      "expirationTime": 365,
+      "apiKeyExpirationDate": "2023-03-20T15:13:45.534Z",
+      "keyDescription": "api key description"
     },
     "additionalAuthTypes": [
       {
