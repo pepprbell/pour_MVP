@@ -34,17 +34,29 @@
     }
 }
 
-.content p {
+.active {
+    width: fit-content;
+    font-size: 14px;
+    transition: 0.2s ease;
+    opacity: 0.8;
+    margin: 0 30px 0 0;
+    font-weight: normal;
+    color: var(--main);
+}
+
+.active:hover {
+    cursor: pointer;
+    color: var(--main);
+    font-weight: normal;
+    opacity: 1;
+}
+
+.disabled {
     width: fit-content;
     font-size: 14px;
     transition: 0.2s;
-    opacity: 0.8;
+    opacity: 0.6;
     margin: 0 30px 0 0;
-}
-
-.content p:hover {
-    cursor: pointer;
-    opacity: 1;
 }
 
 .right {
